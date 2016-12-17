@@ -14,8 +14,11 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _lblNumberIndicator.layer.cornerRadius = 10.0f;
+    _lblNumberIndicator.layer.cornerRadius = 12.5f;
     _lblNumberIndicator.layer.masksToBounds = YES;
+    _lblNumberIndicator.adjustsFontSizeToFitWidth = YES;
+    
+    _lblNumberIndicator.backgroundColor = kAppColor;
     // Initialization code
 }
 

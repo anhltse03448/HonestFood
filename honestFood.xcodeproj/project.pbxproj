@@ -112,6 +112,7 @@
 		6E76EDD11E05698C00BF32C4 /* img_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76EDBF1E05698C00BF32C4 /* img_6.png */; };
 		6E76EDD21E05698C00BF32C4 /* img_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76EDC01E05698C00BF32C4 /* img_6@2x.png */; };
 		6E76EDD31E05698C00BF32C4 /* img_6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76EDC11E05698C00BF32C4 /* img_6@3x.png */; };
+		6E76EDD51E057E0900BF32C4 /* BG_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76EDD41E057E0900BF32C4 /* BG_Image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,6 +333,7 @@
 		6E76EDBF1E05698C00BF32C4 /* img_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_6.png; sourceTree = "<group>"; };
 		6E76EDC01E05698C00BF32C4 /* img_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_6@2x.png"; sourceTree = "<group>"; };
 		6E76EDC11E05698C00BF32C4 /* img_6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_6@3x.png"; sourceTree = "<group>"; };
+		6E76EDD41E057E0900BF32C4 /* BG_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG_Image.png; sourceTree = "<group>"; };
 		A9634B4CE2DBFA5D16BD7421 /* Pods-honestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.release.xcconfig"; sourceTree = "<group>"; };
 		C28C2B7B96E22DDD8024DD0B /* Pods-honestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-honestFood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,6 +498,7 @@
 				6E76EDB51E05698C00BF32C4 /* img_2@3x.png */,
 				6E76EDB61E05698C00BF32C4 /* img_3.png */,
 				6E76EDB71E05698C00BF32C4 /* img_3@2x.png */,
+				6E76EDD41E057E0900BF32C4 /* BG_Image.png */,
 				6E76EDB81E05698C00BF32C4 /* img_3@3x.png */,
 				6E76EDB91E05698C00BF32C4 /* img_4.png */,
 				6E76EDBA1E05698C00BF32C4 /* img_4@2x.png */,
@@ -800,6 +803,7 @@
 				6E76EDD31E05698C00BF32C4 /* img_6@3x.png in Resources */,
 				6E76ED621E04EE4700BF32C4 /* BaseController.xib in Resources */,
 				6E76EDCB1E05698C00BF32C4 /* img_4.png in Resources */,
+				6E76EDD51E057E0900BF32C4 /* BG_Image.png in Resources */,
 				6E76ED651E04EE4700BF32C4 /* CartController.xib in Resources */,
 				6E76EDCE1E05698C00BF32C4 /* img_5.png in Resources */,
 				6E76ED801E04EE4700BF32C4 /* MenuCell.xib in Resources */,

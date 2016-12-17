@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="70.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YMx-6y-FT0">
@@ -32,14 +32,14 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI4-kK-mVc">
-                        <rect key="frame" x="267" y="25.5" width="50" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI4-kK-mVc">
+                        <rect key="frame" x="272" y="23" width="25" height="25"/>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.32549019610000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="NIf-cP-6I2"/>
-                            <constraint firstAttribute="height" constant="20" id="Rcs-2p-Gaj"/>
+                            <constraint firstAttribute="width" constant="25" id="NIf-cP-6I2"/>
+                            <constraint firstAttribute="height" constant="25" id="Rcs-2p-Gaj"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,7 +48,7 @@
                     <constraint firstItem="YMx-6y-FT0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="11y-oM-iNj"/>
                     <constraint firstItem="YMx-6y-FT0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2Es-T5-nzC"/>
                     <constraint firstItem="oI4-kK-mVc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3V8-90-shN"/>
-                    <constraint firstItem="oI4-kK-mVc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="5" id="EEg-bD-LIc"/>
+                    <constraint firstItem="oI4-kK-mVc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-15" id="EEg-bD-LIc"/>
                     <constraint firstAttribute="bottom" secondItem="YMx-6y-FT0" secondAttribute="bottom" constant="5" id="RPp-Ea-jSq"/>
                     <constraint firstItem="MTU-0c-iZZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kH6-wv-Ruf"/>
                     <constraint firstItem="MTU-0c-iZZ" firstAttribute="leading" secondItem="YMx-6y-FT0" secondAttribute="trailing" constant="10" id="sLe-vx-nOr"/>

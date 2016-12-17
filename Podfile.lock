@@ -54,6 +54,8 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.0):
     - FontAwesomeKit/Core
+  - FTIndicator/FTNotificationIndicator (1.1.6)
+  - FTIndicator/FTToastIndicator (1.1.6)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GoogleIPhoneUtilities (1.2.1):
@@ -93,6 +95,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - FontAwesomeKit
+  - FTIndicator/FTNotificationIndicator
+  - FTIndicator/FTToastIndicator
   - HexColors
   - INSPullToRefresh
   - KRLCollectionViewGridLayout
@@ -114,6 +118,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   FirebaseMessaging: 789d23fd796594dfb55dcf36cd325541df887c22
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  FTIndicator: c005c5787dbb6c40e0aa5af791e60ac1f164e3c0
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
@@ -127,6 +132,6 @@ SPEC CHECKSUMS:
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-PODFILE CHECKSUM: 1c451f69de661bd3b7cec939a5ecff46edbd518b
+PODFILE CHECKSUM: a1e67fdb10c4374e743736f0f096e26a866742f4
 
 COCOAPODS: 1.1.1
