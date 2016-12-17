@@ -47,6 +47,9 @@
         _imgUrl = dict[@"imgUrl"];
         _price = dict[@"price"];
         _nutrition = [[Nutrition alloc]initWithDictionary:dict];
+        _unit = dict[@"unit"];
+        _quantity = dict[@"quantity"];
+        
     }
     
     return self;

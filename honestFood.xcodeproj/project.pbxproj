@@ -737,6 +737,7 @@
 			files = (
 				6E76ED781E04EE4700BF32C4 /* HistoryController.xib in Resources */,
 				36D67F951E0550C0001BB91E /* DetailViewController.xib in Resources */,
+				6E76EDAF1E05629B00BF32C4 /* list@2x.png in Resources */,
 				6E76ED601E04EE4700BF32C4 /* BaseCollectionController.xib in Resources */,
 				6E76EDD01E05698C00BF32C4 /* img_5@3x.png in Resources */,
 				36D67F721E050EB6001BB91E /* FavoriteTableViewCell.xib in Resources */,
