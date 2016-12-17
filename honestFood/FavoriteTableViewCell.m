@@ -61,6 +61,8 @@
         [self.lblPrice setText:str] ;
     } else {
         NSString *str = [NSString stringWithFormat:@"%@" , food.price] ;
+        _img1.hidden = true ;
+        _img2.image = [ UIImage imageNamed:@"img_cart"] ;
         [self.lblPrice setText:str] ;
     }
 }

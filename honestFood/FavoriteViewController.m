@@ -95,7 +95,7 @@
 {
     NSIndexPath *indexPath = [self.tbl indexPathForCell:cell] ;
     Food *food = _foodList[indexPath.row] ;
-    if (food.quantity.integerValue > 1 ) {
+    if (food.quantity.integerValue >= 1 ) {
         food.quantity = @(food.quantity.integerValue - 1 );
     } else {
         
