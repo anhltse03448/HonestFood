@@ -23,11 +23,11 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
-    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    [self.window setRootViewController:login];
-    [self.window makeKeyAndVisible];
+//    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+//    [self.window setRootViewController:login];
+//    [self.window makeKeyAndVisible];
     
-//    [Menu settingSlideMenuController];
+    [Menu settingSlideMenuController];
     
     return YES;
 }
