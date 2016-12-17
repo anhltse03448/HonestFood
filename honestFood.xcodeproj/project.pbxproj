@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36D67F651E050E8D001BB91E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F631E050E8D001BB91E /* LoginViewController.m */; };
+		36D67F661E050E8D001BB91E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F641E050E8D001BB91E /* LoginViewController.xib */; };
+		36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F691E050EA9001BB91E /* FavoriteViewController.m */; };
+		36D67F6C1E050EA9001BB91E /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F6A1E050EA9001BB91E /* FavoriteViewController.xib */; };
+		36D67F711E050EB6001BB91E /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F6F1E050EB6001BB91E /* FavoriteTableViewCell.m */; };
+		36D67F721E050EB6001BB91E /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F701E050EB6001BB91E /* FavoriteTableViewCell.xib */; };
+		36D67F871E050EDA001BB91E /* Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F861E050EDA001BB91E /* Delegate.m */; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -47,8 +54,6 @@
 		6E76ED791E04EE4700BF32C4 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED3A1E04EE4700BF32C4 /* KLCPopup.m */; };
 		6E76ED7A1E04EE4700BF32C4 /* ListItemInCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED3C1E04EE4700BF32C4 /* ListItemInCartView.m */; };
 		6E76ED7B1E04EE4700BF32C4 /* ListItemInCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED3D1E04EE4700BF32C4 /* ListItemInCartView.xib */; };
-		6E76ED7C1E04EE4700BF32C4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED3F1E04EE4700BF32C4 /* LoginController.m */; };
-		6E76ED7D1E04EE4700BF32C4 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED401E04EE4700BF32C4 /* LoginController.xib */; };
 		6E76ED7E1E04EE4700BF32C4 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED421E04EE4700BF32C4 /* Menu.m */; };
 		6E76ED7F1E04EE4700BF32C4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED441E04EE4700BF32C4 /* MenuCell.m */; };
 		6E76ED801E04EE4700BF32C4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED451E04EE4700BF32C4 /* MenuCell.xib */; };
@@ -70,6 +75,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36D67F621E050E8D001BB91E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		36D67F631E050E8D001BB91E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		36D67F641E050E8D001BB91E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		36D67F681E050EA9001BB91E /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		36D67F691E050EA9001BB91E /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		36D67F6A1E050EA9001BB91E /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		36D67F6E1E050EB6001BB91E /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
+		36D67F6F1E050EB6001BB91E /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
+		36D67F701E050EB6001BB91E /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		36D67F741E050ECA001BB91E /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		36D67F751E050ECA001BB91E /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		36D67F761E050ECA001BB91E /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		36D67F771E050ECA001BB91E /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
+		36D67F781E050ECA001BB91E /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		36D67F791E050ECA001BB91E /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		36D67F7A1E050ECA001BB91E /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		36D67F7B1E050ECA001BB91E /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		36D67F7C1E050ECA001BB91E /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		36D67F7D1E050ECA001BB91E /* MontserratAlternates-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Black.otf"; sourceTree = "<group>"; };
+		36D67F7E1E050ECA001BB91E /* MontserratAlternates-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.otf"; sourceTree = "<group>"; };
+		36D67F7F1E050ECA001BB91E /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
+		36D67F801E050ECA001BB91E /* MontserratAlternates-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLight.otf"; sourceTree = "<group>"; };
+		36D67F811E050ECA001BB91E /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
+		36D67F821E050ECA001BB91E /* MontserratAlternates-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.otf"; sourceTree = "<group>"; };
+		36D67F831E050ECA001BB91E /* MontserratAlternates-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.otf"; sourceTree = "<group>"; };
+		36D67F841E050ECA001BB91E /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
+		36D67F851E050ECA001BB91E /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
+		36D67F861E050EDA001BB91E /* Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delegate.m; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,9 +167,6 @@
 		6E76ED3B1E04EE4700BF32C4 /* ListItemInCartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemInCartView.h; sourceTree = "<group>"; };
 		6E76ED3C1E04EE4700BF32C4 /* ListItemInCartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemInCartView.m; sourceTree = "<group>"; };
 		6E76ED3D1E04EE4700BF32C4 /* ListItemInCartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListItemInCartView.xib; sourceTree = "<group>"; };
-		6E76ED3E1E04EE4700BF32C4 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
-		6E76ED3F1E04EE4700BF32C4 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
-		6E76ED401E04EE4700BF32C4 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		6E76ED411E04EE4700BF32C4 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		6E76ED421E04EE4700BF32C4 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		6E76ED431E04EE4700BF32C4 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
@@ -189,6 +219,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36D67F5C1E050E47001BB91E /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36D67F621E050E8D001BB91E /* LoginViewController.h */,
+				36D67F631E050E8D001BB91E /* LoginViewController.m */,
+				36D67F641E050E8D001BB91E /* LoginViewController.xib */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		36D67F671E050E9B001BB91E /* FavoriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36D67F6D1E050EAB001BB91E /* FavoriteCell */,
+				36D67F681E050EA9001BB91E /* FavoriteViewController.h */,
+				36D67F691E050EA9001BB91E /* FavoriteViewController.m */,
+				36D67F6A1E050EA9001BB91E /* FavoriteViewController.xib */,
+			);
+			name = FavoriteViewController;
+			sourceTree = "<group>";
+		};
+		36D67F6D1E050EAB001BB91E /* FavoriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				36D67F861E050EDA001BB91E /* Delegate.m */,
+				36D67F6E1E050EB6001BB91E /* FavoriteTableViewCell.h */,
+				36D67F6F1E050EB6001BB91E /* FavoriteTableViewCell.m */,
+				36D67F701E050EB6001BB91E /* FavoriteTableViewCell.xib */,
+			);
+			name = FavoriteCell;
+			sourceTree = "<group>";
+		};
+		36D67F731E050EB9001BB91E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				36D67F741E050ECA001BB91E /* Montserrat-Black.otf */,
+				36D67F751E050ECA001BB91E /* Montserrat-Bold.otf */,
+				36D67F761E050ECA001BB91E /* Montserrat-ExtraBold.otf */,
+				36D67F771E050ECA001BB91E /* Montserrat-ExtraLight.otf */,
+				36D67F781E050ECA001BB91E /* Montserrat-Light.otf */,
+				36D67F791E050ECA001BB91E /* Montserrat-Medium.otf */,
+				36D67F7A1E050ECA001BB91E /* Montserrat-Regular.otf */,
+				36D67F7B1E050ECA001BB91E /* Montserrat-SemiBold.otf */,
+				36D67F7C1E050ECA001BB91E /* Montserrat-Thin.otf */,
+				36D67F7D1E050ECA001BB91E /* MontserratAlternates-Black.otf */,
+				36D67F7E1E050ECA001BB91E /* MontserratAlternates-Bold.otf */,
+				36D67F7F1E050ECA001BB91E /* MontserratAlternates-ExtraBold.otf */,
+				36D67F801E050ECA001BB91E /* MontserratAlternates-ExtraLight.otf */,
+				36D67F811E050ECA001BB91E /* MontserratAlternates-Light.otf */,
+				36D67F821E050ECA001BB91E /* MontserratAlternates-Medium.otf */,
+				36D67F831E050ECA001BB91E /* MontserratAlternates-Regular.otf */,
+				36D67F841E050ECA001BB91E /* MontserratAlternates-SemiBold.otf */,
+				36D67F851E050ECA001BB91E /* MontserratAlternates-Thin.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		6E76ECDD1E04D54800BF32C4 = {
 			isa = PBXGroup;
 			children = (
@@ -289,9 +376,6 @@
 				6E76ED3B1E04EE4700BF32C4 /* ListItemInCartView.h */,
 				6E76ED3C1E04EE4700BF32C4 /* ListItemInCartView.m */,
 				6E76ED3D1E04EE4700BF32C4 /* ListItemInCartView.xib */,
-				6E76ED3E1E04EE4700BF32C4 /* LoginController.h */,
-				6E76ED3F1E04EE4700BF32C4 /* LoginController.m */,
-				6E76ED401E04EE4700BF32C4 /* LoginController.xib */,
 				6E76ED411E04EE4700BF32C4 /* Menu.h */,
 				6E76ED421E04EE4700BF32C4 /* Menu.m */,
 				6E76ED431E04EE4700BF32C4 /* MenuCell.h */,
@@ -328,6 +412,7 @@
 		6E76ED901E04F5BA00BF32C4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				36D67F731E050EB9001BB91E /* Font */,
 				6E76ED911E04F5E000BF32C4 /* NSDate+MDCalendar.h */,
 				6E76ED921E04F5E000BF32C4 /* NSDate+MDCalendar.m */,
 			);
@@ -337,6 +422,8 @@
 		6E76ED941E04F9F300BF32C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36D67F671E050E9B001BB91E /* FavoriteViewController */,
+				36D67F5C1E050E47001BB91E /* LoginViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,10 +517,11 @@
 			files = (
 				6E76ED781E04EE4700BF32C4 /* HistoryController.xib in Resources */,
 				6E76ED601E04EE4700BF32C4 /* BaseCollectionController.xib in Resources */,
+				36D67F721E050EB6001BB91E /* FavoriteTableViewCell.xib in Resources */,
 				6E76ED6D1E04EE4700BF32C4 /* FoodCategoryCollectionCell.xib in Resources */,
 				6E76ED841E04EE4700BF32C4 /* MyAccountController.xib in Resources */,
 				6E76ECF91E04D54900BF32C4 /* LaunchScreen.storyboard in Resources */,
-				6E76ED7D1E04EE4700BF32C4 /* LoginController.xib in Resources */,
+				36D67F661E050E8D001BB91E /* LoginViewController.xib in Resources */,
 				6E76ED821E04EE4700BF32C4 /* MenuController.xib in Resources */,
 				6E76ED731E04EE4700BF32C4 /* FoodController.xib in Resources */,
 				6E76ED6B1E04EE4700BF32C4 /* FoodCategoryCell.xib in Resources */,
@@ -445,6 +533,7 @@
 				6E76ED801E04EE4700BF32C4 /* MenuCell.xib in Resources */,
 				6E76ECF61E04D54900BF32C4 /* Assets.xcassets in Resources */,
 				6E76ED711E04EE4700BF32C4 /* FoodCell.xib in Resources */,
+				36D67F6C1E050EA9001BB91E /* FavoriteViewController.xib in Resources */,
 				6E76ECF41E04D54900BF32C4 /* Main.storyboard in Resources */,
 				6E76ED7B1E04EE4700BF32C4 /* ListItemInCartView.xib in Resources */,
 				6E76ED631E04EE4700BF32C4 /* cart.png in Resources */,
@@ -506,19 +595,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D67F651E050E8D001BB91E /* LoginViewController.m in Sources */,
 				6E76ED7E1E04EE4700BF32C4 /* Menu.m in Sources */,
 				6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */,
 				6E76ED8C1E04EE4700BF32C4 /* UserDefaults.m in Sources */,
 				6E76ED881E04EE4700BF32C4 /* RACollectionViewReorderableTripletLayout.m in Sources */,
 				6E76ED7F1E04EE4700BF32C4 /* MenuCell.m in Sources */,
-				6E76ED7C1E04EE4700BF32C4 /* LoginController.m in Sources */,
 				6E76ED641E04EE4700BF32C4 /* CartController.m in Sources */,
 				6E76ED611E04EE4700BF32C4 /* BaseController.m in Sources */,
+				36D67F711E050EB6001BB91E /* FavoriteTableViewCell.m in Sources */,
 				6E76ED6A1E04EE4700BF32C4 /* FoodCategoryCell.m in Sources */,
 				6E76ED831E04EE4700BF32C4 /* MyAccountController.m in Sources */,
 				6E76ED811E04EE4700BF32C4 /* MenuController.m in Sources */,
+				36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */,
 				6E76ED7A1E04EE4700BF32C4 /* ListItemInCartView.m in Sources */,
 				6E76ED5E1E04EE4700BF32C4 /* AppService.m in Sources */,
+				36D67F871E050EDA001BB91E /* Delegate.m in Sources */,
 				6E76ED861E04EE4700BF32C4 /* NotificationCenter.m in Sources */,
 				6E76ED871E04EE4700BF32C4 /* NSMutableArray+Food.m in Sources */,
 				6E76ED771E04EE4700BF32C4 /* HistoryController.m in Sources */,
