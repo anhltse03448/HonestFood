@@ -16,12 +16,12 @@
 
 
 
-#define kAPIBaseUrl                         @"http://192.168.43.226:8080/"
+#define kAPIBaseUrl                         @"http://192.168.10.135:8080/"
 #define kAPIGetListFoodCat                  @"getlistfoodcat"
 #define kAPIGetListFood                     @"getlistfood"
 #define kAPIGetHistoryOrder                 @"gethistoryorder"
 #define kAPIFoodActionFavorite               @"changestatusoffavoritefood"
-
+#define kApiLogin                           @"loginfb"
 
 
 #define kNotifyAddFoodToCartName                @"FoodAddedToCart"

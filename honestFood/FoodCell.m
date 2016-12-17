@@ -112,41 +112,16 @@
     
     if (_type == FoodCellTypeFavorite) {
         
-//        [rightUtilityButtons sw_addUtilityButtonWithColor:
-//         [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-//                                                    title:@"Delete"];
+        [rightUtilityButtons sw_addUtilityButtonWithColor:
+         [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                    title:@"Delete"];
         
-        EMEmojiableBtn *emo = [[EMEmojiableBtn alloc] initWithFrame:CGRectMake(0, 0, 52.0, 52.0)];
-        emo.backgroundColor = [UIColor whiteColor];
-        emo.delegate = self;
-        emo.dataset = @[
-                        [[EMEmojiableOption alloc] initWithImage:@"img_1" withName:@"dislike"],
-                        [[EMEmojiableOption alloc] initWithImage:@"img_2" withName:@"broken"],
-                        [[EMEmojiableOption alloc] initWithImage:@"img_3" withName:@"he he"],
-                        [[EMEmojiableOption alloc] initWithImage:@"img_4" withName:@"ooh"],
-                        [[EMEmojiableOption alloc] initWithImage:@"img_5" withName:@"meh !"],
-                        [[EMEmojiableOption alloc] initWithImage:@"img_6" withName:@"ahh !"]
-                        ];
-        [emo setImage:[UIImage imageNamed:@"img_1"] forState:UIControlStateNormal];
-        [rightUtilityButtons addObject:emo];
-    }else
+
+    }else if(_type == FoodCellTypeInCart)
     {
-        EMEmojiableBtn *emo = [[EMEmojiableBtn alloc] initWithFrame:CGRectMake(0, 0, 52.0, 52.0)];
-        emo.backgroundColor = [UIColor whiteColor];
-        emo.delegate = self;
-        emo.dataset = @[
-                           [[EMEmojiableOption alloc] initWithImage:@"img_1" withName:@"dislike"],
-                           [[EMEmojiableOption alloc] initWithImage:@"img_2" withName:@"broken"],
-                           [[EMEmojiableOption alloc] initWithImage:@"img_3" withName:@"he he"],
-                           [[EMEmojiableOption alloc] initWithImage:@"img_4" withName:@"ooh"],
-                           [[EMEmojiableOption alloc] initWithImage:@"img_5" withName:@"meh !"],
-                           [[EMEmojiableOption alloc] initWithImage:@"img_6" withName:@"ahh !"]
-                           ];
-        [emo setImage:[UIImage imageNamed:@"img_1"] forState:UIControlStateNormal];
-        [rightUtilityButtons addObject:emo];
-//        [rightUtilityButtons sw_addUtilityButtonWithColor:
-//         [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-//                                                    title:@"Favorite"];
+        [rightUtilityButtons sw_addUtilityButtonWithColor:
+         [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                    title:@"Favorite"];
     }
     
     

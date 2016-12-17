@@ -19,6 +19,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 pod 'SWTableViewCell'
 pod 'EMEmojiableBtn'
+pod 'FTIndicator/FTNotificationIndicator'
+pod 'FTIndicator/FTToastIndicator'
 
 
 end

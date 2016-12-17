@@ -12,5 +12,6 @@
 
 +(NSString*)stringDateFormatFrom:(NSNumber*)longDate;
 +(NSString*)totalPriceWithListFood:(NSMutableArray<Food*>*)foodList;
++(void)showChartWiewWithChart:(UIView*)chart;
 
 @end

@@ -28,4 +28,15 @@
     
 }
 
++(void)showChartWiewWithChart:(UIView*)chart;
+{
+    
+    
+    KLCPopup* popup =  [KLCPopup popupWithContentView:chart showType:KLCPopupShowTypeFadeIn dismissType:KLCPopupDismissTypeFadeOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
+    popup.showType = KLCPopupShowTypeSlideInFromBottom;
+//    [popup showWithLayout:KLCPopupLayoutMake(KLCPopupHorizontalLayoutCenter,KLCPopupVerticalLayoutBottom)];
+
+    [popup show];
+}
+
 @end

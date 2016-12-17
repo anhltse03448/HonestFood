@@ -43,6 +43,19 @@
     [self updateLabel];
     self.moveToWindow();
 }
+
+
+- (IBAction)btnChartDidTap:(id)sender {
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kscreenWidth -60, 200)];
+    view.backgroundColor = [UIColor whiteColor];
+    [Utils showChartWiewWithChart:view];
+    
+}
+
+
+
+
 - (IBAction)btnBuyDidTap:(id)sender {
     
     

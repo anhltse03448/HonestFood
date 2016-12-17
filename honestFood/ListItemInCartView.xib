@@ -47,6 +47,9 @@
                                 <constraint firstAttribute="width" constant="50" id="x9S-2M-j8K"/>
                             </constraints>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnChartDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="RRd-yS-d72"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

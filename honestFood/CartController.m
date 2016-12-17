@@ -108,6 +108,15 @@
     
 }
 
+- (IBAction)btnChartDidTap:(id)sender {
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kscreenWidth - 20, 350)];
+    view.backgroundColor = [UIColor whiteColor];
+    [Utils showChartWiewWithChart:view];
+}
+
+
+
 -(void)settingLeftMenuBars
 {
     FAKFontAwesome* bars = [FAKFontAwesome barsIconWithSize:20];
@@ -138,14 +147,25 @@
         
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FoodCell" owner:nil options:nil];
         cell = nib[0];
+        
+        if (_type == CartControllerTypeHistory) {
+            
+            [cell hiddenActionButton];
+            cell.type = FoodCellTypeHistory;
+        }
+        if (_type == CartControllerTypeNew) {
+            
+            cell.type = FoodCellTypeInCategory;
+            
+        }
+        
+        
+        
     }
     Food *food = _foodList[indexPath.row];
     [cell displayWithFood:food];
     
-    if (_type == CartControllerTypeHistory) {
-        
-        [cell hiddenActionButton];
-    }
+    
     return cell;
 }
 - (IBAction)btnBuyDidTap:(id)sender {
