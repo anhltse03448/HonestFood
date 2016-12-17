@@ -78,6 +78,9 @@
 		6E76ED9A1E051D0900BF32C4 /* BlogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED981E051D0900BF32C4 /* BlogController.xib */; };
 		6E76ED9D1E05218200BF32C4 /* EmptyDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED9C1E05218200BF32C4 /* EmptyDataSourceDelegate.m */; };
 		6E76ED9F1E0521EB00BF32C4 /* food-holder.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED9E1E0521EB00BF32C4 /* food-holder.png */; };
+		6E76EDA31E0529A300BF32C4 /* BlogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76EDA11E0529A300BF32C4 /* BlogCell.m */; };
+		6E76EDA41E0529A300BF32C4 /* BlogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76EDA21E0529A300BF32C4 /* BlogCell.xib */; };
+		6E76EDA71E05320400BF32C4 /* Blog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76EDA61E05320400BF32C4 /* Blog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +217,11 @@
 		6E76ED9B1E05218200BF32C4 /* EmptyDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyDataSourceDelegate.h; sourceTree = "<group>"; };
 		6E76ED9C1E05218200BF32C4 /* EmptyDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyDataSourceDelegate.m; sourceTree = "<group>"; };
 		6E76ED9E1E0521EB00BF32C4 /* food-holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food-holder.png"; sourceTree = "<group>"; };
+		6E76EDA01E0529A300BF32C4 /* BlogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogCell.h; sourceTree = "<group>"; };
+		6E76EDA11E0529A300BF32C4 /* BlogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogCell.m; sourceTree = "<group>"; };
+		6E76EDA21E0529A300BF32C4 /* BlogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogCell.xib; sourceTree = "<group>"; };
+		6E76EDA51E05320400BF32C4 /* Blog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blog.h; sourceTree = "<group>"; };
+		6E76EDA61E05320400BF32C4 /* Blog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blog.m; sourceTree = "<group>"; };
 		A9634B4CE2DBFA5D16BD7421 /* Pods-honestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.release.xcconfig"; sourceTree = "<group>"; };
 		C28C2B7B96E22DDD8024DD0B /* Pods-honestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-honestFood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +464,11 @@
 				6E76ED961E051D0900BF32C4 /* BlogController.h */,
 				6E76ED971E051D0900BF32C4 /* BlogController.m */,
 				6E76ED981E051D0900BF32C4 /* BlogController.xib */,
+				6E76EDA01E0529A300BF32C4 /* BlogCell.h */,
+				6E76EDA11E0529A300BF32C4 /* BlogCell.m */,
+				6E76EDA21E0529A300BF32C4 /* BlogCell.xib */,
+				6E76EDA51E05320400BF32C4 /* Blog.h */,
+				6E76EDA61E05320400BF32C4 /* Blog.m */,
 			);
 			name = BlogController;
 			sourceTree = "<group>";
@@ -569,6 +582,7 @@
 				6E76ECF61E04D54900BF32C4 /* Assets.xcassets in Resources */,
 				6E76ED711E04EE4700BF32C4 /* FoodCell.xib in Resources */,
 				36D67F6C1E050EA9001BB91E /* FavoriteViewController.xib in Resources */,
+				6E76EDA41E0529A300BF32C4 /* BlogCell.xib in Resources */,
 				6E76ECF41E04D54900BF32C4 /* Main.storyboard in Resources */,
 				6E76ED7B1E04EE4700BF32C4 /* ListItemInCartView.xib in Resources */,
 				6E76ED631E04EE4700BF32C4 /* cart.png in Resources */,
@@ -656,6 +670,7 @@
 				6E76ED8A1E04EE4700BF32C4 /* UIButton+VerticalLayout.m in Sources */,
 				6E76ED5F1E04EE4700BF32C4 /* BaseCollectionController.m in Sources */,
 				6E76ED721E04EE4700BF32C4 /* FoodController.m in Sources */,
+				6E76EDA71E05320400BF32C4 /* Blog.m in Sources */,
 				6E76ED701E04EE4700BF32C4 /* FoodCell.m in Sources */,
 				6E76ED9D1E05218200BF32C4 /* EmptyDataSourceDelegate.m in Sources */,
 				6E76ED891E04EE4700BF32C4 /* RACollectionViewTripletLayout.m in Sources */,
@@ -666,6 +681,7 @@
 				6E76ED931E04F5E000BF32C4 /* NSDate+MDCalendar.m in Sources */,
 				6E76ED761E04EE4700BF32C4 /* GlobalVar.m in Sources */,
 				6E76ED661E04EE4700BF32C4 /* CartView.m in Sources */,
+				6E76EDA31E0529A300BF32C4 /* BlogCell.m in Sources */,
 				6E76ED041E04D9BF00BF32C4 /* User.m in Sources */,
 				6E76ED071E04DA4B00BF32C4 /* Role.m in Sources */,
 				6E76ED6C1E04EE4700BF32C4 /* FoodCategoryCollectionCell.m in Sources */,

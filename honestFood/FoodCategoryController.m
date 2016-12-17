@@ -24,6 +24,7 @@
 {
     NSString *_foodCategoryId ;
     KRLCollectionViewGridLayout *layout;
+    CarbonSwipeRefresh *refresh;
     
 }
 
@@ -169,11 +170,23 @@ static NSString *foodCategoryCellId  = @"foodCategoryCellId";
 
     self.collection.dataSource = self;
     self.collection.delegate = self;
-    
-    
     [_collection registerNib:[UINib nibWithNibName:@"FoodCategoryCollectionCell" bundle:nil] forCellWithReuseIdentifier:foodCategoryCellId];
+    
+    refresh = [[CarbonSwipeRefresh alloc] initWithScrollView:self.collection];
+    [refresh setColors:@[
+                         [UIColor blueColor],
+                         [UIColor redColor],
+                         [UIColor orangeColor],
+                         [UIColor greenColor]]
+     ];
+    [self.view addSubview:refresh];
+    [refresh addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
 }
 
+-(void)refresh:(id)sender
+{
+    
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     

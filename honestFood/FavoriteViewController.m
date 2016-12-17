@@ -28,6 +28,8 @@ int check = 0;
     [super viewDidLoad];
     self.tbl.delegate = self ;
     self.tbl.dataSource = self ;
+    self.tbl.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
+    self.tbl.emptyDataSetDelegate = [EmptyDataSourceDelegate sharedInstance];
     self.tbl.separatorStyle = UITableViewCellSeparatorStyleNone ;
     _listCheck = [[NSMutableArray alloc]init];
 }
