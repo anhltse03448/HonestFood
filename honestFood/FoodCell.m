@@ -38,15 +38,13 @@
 -(void)displayWithFood:(Food*)food
 {
     _food_ = food;
-    
-    NSLog(@"%@ %@",food , _food_);
     [_foodImage sd_setImageWithURL:[NSURL URLWithString:food.imgUrl] placeholderImage:nil];
     _lblFoodName.text = food.foodName;
     _lblFoodPrice.text = [food.quantity stringValue];
 }
 - (IBAction)addToCartButtonDidTap:(id)sender {
     
-    _btnAddToCart.hidden = YES;
+//    _btnAddToCart.hidden = YES;
     _stepper.hidden = NO;
     [_food_ setQuantity:@1];
    _lblFoodPrice.text = [_food_.quantity stringValue];

@@ -6,6 +6,8 @@
 //  Copyright © 2016 tuanvu. All rights reserved.
 //
 
+
+
 #import "FoodCategoryController.h"
 #import "FoodCategoryCollectionCell.h"
 #import "FoodController.h"
@@ -46,23 +48,24 @@ static NSString *foodCategoryCellId  = @"foodCategoryCellId";
     [self settingCollectionLayout];
     [self loadingData];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hiddenFloatButton) name:kNotifyCarbonKitWillBeginTransition object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reShowFloatButton) name:kNotifyCarbonKitDidFinishTransition object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hiddenFloatButton) name:kNotifyCarbonKitWillBeginTransition object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reShowFloatButton) name:kNotifyCarbonKitDidFinishTransition object:nil];
     
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)dealloc
-{
-   
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotifyCarbonKitWillBeginTransition object:nil];
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotifyCarbonKitDidFinishTransition object:nil];
-    
-}
+//-(void)dealloc
+//{
+//   
+//    [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotifyCarbonKitWillBeginTransition object:nil];
+//    [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotifyCarbonKitDidFinishTransition object:nil];
+//    
+//}
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
 //     _plusButtonsViewMain = [[LGPlusButtonsView alloc]initWithNumberOfButtons:4 firstButtonIsPlusButton:YES showAfterInit:YES];
 //    _plusButtonsViewMain.observedScrollView = self.collection;
 //    _plusButtonsViewMain.coverColor = [UIColor colorWithWhite:1.f alpha:0.7];
@@ -209,32 +212,19 @@ static NSString *foodCategoryCellId  = @"foodCategoryCellId";
 
 #pragma mark float Button Action
 
--(void)hiddenFloatButton
-{
-    
-    [UIView transitionWithView:_plusButtonsViewMain
-                      duration:0.4
-                       options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:^{
-                        
-                    }
-                    completion:NULL];
-    
- 
-//    [self.plusButtonsViewMain hideButtonsAnimated:YES completionHandler:nil];
-}
-
--(void)reShowFloatButton
-{
-    [UIView transitionWithView:_plusButtonsViewMain
-                      duration:0.4
-                       options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:^{
-                        _plusButtonsViewMain.hidden = NO;
-                    }
-                    completion:NULL];
+//-(void)hiddenFloatButton
+//{
+//    
+//    [self.plusButtonsViewMain hideAnimated:YES completionHandler:nil];
+//}
+//
+//-(void)reShowFloatButton
+//{
 //    [self.plusButtonsViewMain showAnimated:YES completionHandler:nil];
-}
+//
+//
+//    
+//}
 
 
 #pragma mark - FM

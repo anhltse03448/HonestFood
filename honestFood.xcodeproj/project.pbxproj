@@ -72,6 +72,8 @@
 		6E76ED8D1E04EE4700BF32C4 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED5D1E04EE4700BF32C4 /* Utils.m */; };
 		6E76ED8F1E04EF3A00BF32C4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76ED8E1E04EF3A00BF32C4 /* Bolts.framework */; };
 		6E76ED931E04F5E000BF32C4 /* NSDate+MDCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED921E04F5E000BF32C4 /* NSDate+MDCalendar.m */; };
+		6E76ED991E051D0900BF32C4 /* BlogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ED971E051D0900BF32C4 /* BlogController.m */; };
+		6E76ED9A1E051D0900BF32C4 /* BlogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E76ED981E051D0900BF32C4 /* BlogController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +201,9 @@
 		6E76ED8E1E04EF3A00BF32C4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6E76ED911E04F5E000BF32C4 /* NSDate+MDCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MDCalendar.h"; sourceTree = "<group>"; };
 		6E76ED921E04F5E000BF32C4 /* NSDate+MDCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MDCalendar.m"; sourceTree = "<group>"; };
+		6E76ED961E051D0900BF32C4 /* BlogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogController.h; sourceTree = "<group>"; };
+		6E76ED971E051D0900BF32C4 /* BlogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogController.m; sourceTree = "<group>"; };
+		6E76ED981E051D0900BF32C4 /* BlogController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogController.xib; sourceTree = "<group>"; };
 		A9634B4CE2DBFA5D16BD7421 /* Pods-honestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.release.xcconfig"; sourceTree = "<group>"; };
 		C28C2B7B96E22DDD8024DD0B /* Pods-honestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honestFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honestFood/Pods-honestFood.debug.xcconfig"; sourceTree = "<group>"; };
 		F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-honestFood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,10 +427,21 @@
 		6E76ED941E04F9F300BF32C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E76ED951E051CCB00BF32C4 /* BlogController */,
 				36D67F671E050E9B001BB91E /* FavoriteViewController */,
 				36D67F5C1E050E47001BB91E /* LoginViewController */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		6E76ED951E051CCB00BF32C4 /* BlogController */ = {
+			isa = PBXGroup;
+			children = (
+				6E76ED961E051D0900BF32C4 /* BlogController.h */,
+				6E76ED971E051D0900BF32C4 /* BlogController.m */,
+				6E76ED981E051D0900BF32C4 /* BlogController.xib */,
+			);
+			name = BlogController;
 			sourceTree = "<group>";
 		};
 		6F2F262C54B65FFDB2388797 /* Pods */ = {
@@ -518,6 +534,7 @@
 				6E76ED781E04EE4700BF32C4 /* HistoryController.xib in Resources */,
 				6E76ED601E04EE4700BF32C4 /* BaseCollectionController.xib in Resources */,
 				36D67F721E050EB6001BB91E /* FavoriteTableViewCell.xib in Resources */,
+				6E76ED9A1E051D0900BF32C4 /* BlogController.xib in Resources */,
 				6E76ED6D1E04EE4700BF32C4 /* FoodCategoryCollectionCell.xib in Resources */,
 				6E76ED841E04EE4700BF32C4 /* MyAccountController.xib in Resources */,
 				6E76ECF91E04D54900BF32C4 /* LaunchScreen.storyboard in Resources */,
@@ -606,6 +623,7 @@
 				36D67F711E050EB6001BB91E /* FavoriteTableViewCell.m in Sources */,
 				6E76ED6A1E04EE4700BF32C4 /* FoodCategoryCell.m in Sources */,
 				6E76ED831E04EE4700BF32C4 /* MyAccountController.m in Sources */,
+				6E76ED991E051D0900BF32C4 /* BlogController.m in Sources */,
 				6E76ED811E04EE4700BF32C4 /* MenuController.m in Sources */,
 				36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */,
 				6E76ED7A1E04EE4700BF32C4 /* ListItemInCartView.m in Sources */,
