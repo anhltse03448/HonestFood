@@ -25,7 +25,7 @@
 
 #define kNotifyAddFoodToCartName                @"FoodAddedToCart"
 #define kNotifyCarbonKitWillBeginTransition     @"CarbonKitWillBeginTransition"
-#define kNotifyCarbonKitDidFinishTransition    @"CarbonKitWillBeginTransition"
+#define kNotifyCarbonKitDidFinishTransition    @"CarbonKitDidFinishTransition"
 
 
 

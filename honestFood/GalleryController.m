@@ -71,13 +71,14 @@
     [[NSNotificationCenter defaultCenter]postNotificationName:kNotifyCarbonKitWillBeginTransition object:nil];
     
 }
+
+
 - (void)carbonTabSwipeNavigation:(nonnull CarbonTabSwipeNavigation *)carbonTabSwipeNavigation
-      didFinishTransitionToIndex:(NSUInteger)index;
+                  didMoveAtIndex:(NSUInteger)index;
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyCarbonKitDidFinishTransition object:nil];
-    
-
 }
+
 
 
 - (void)didReceiveMemoryWarning {
