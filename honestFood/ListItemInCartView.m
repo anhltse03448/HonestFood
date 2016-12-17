@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnChart;
 
 @end
 
@@ -39,8 +40,12 @@
 -(void)willMoveToWindow:(UIWindow *)newWindow
 {
     [self.tblItems reloadData];
+    [self updateLabel];
+    self.moveToWindow();
 }
 - (IBAction)btnBuyDidTap:(id)sender {
+    
+    
 }
 
 
@@ -55,9 +60,20 @@
     self.tblItems.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
     self.tblItems.emptyDataSetDelegate  = [EmptyDataSourceDelegate sharedInstance];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateLabel) name:kNotifyAddFoodToCartName object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateLabel) name:kNotifyAddFoodIncreaseCount object:nil];
+    
+    [_btnChart setImage:[UIImage barChartImage] forState:UIControlStateNormal];
+    
     _viewCartInfo.backgroundColor = kAppColor;
     
     
+}
+
+
+-(void)updateLabel
+{
+    _lblPrice.text = [Utils totalPriceWithListFood:[[GlobalVar getInstance]foodList]];
 }
 
 +(ListItemInCartView*)shared
@@ -83,7 +99,10 @@
        
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FoodCell" owner:nil options:nil];
         cell = nib[0];
+        cell.type = FoodCellTypeInCart;
     }
+    
+
     Food *food = [[GlobalVar getInstance]foodList][indexPath.row];
    [cell displayWithFood:food];
     return cell;

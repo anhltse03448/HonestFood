@@ -26,6 +26,8 @@
 @property (nonatomic,weak) id <SomethingDelegate> delegate;
 
 
+
+
 - (void)setFood:(Food*)food;
 - (void)setEditting:(BOOL )check ;
 @end

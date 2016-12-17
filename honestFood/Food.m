@@ -46,6 +46,8 @@
         _foodName = dict[@"foodName"];
         _imgUrl = dict[@"imgUrl"];
         _price = dict[@"price"];
+        _unit = dict[@"unit"];
+        _quantity = dict[@"quantity"];
         
     }
     

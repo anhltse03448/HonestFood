@@ -49,6 +49,8 @@
 -(void)updateLabelIndicator
 {
     _lblIndicator.text = [@([[[GlobalVar getInstance]foodList] count]) stringValue];
+    
+    
 }
 
 /*

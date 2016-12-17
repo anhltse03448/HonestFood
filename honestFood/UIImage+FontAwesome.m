@@ -127,5 +127,12 @@
     return image;
 }
 
++(UIImage*)barChartImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome barChartIconWithSize:25.0f];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(25, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
 
 @end

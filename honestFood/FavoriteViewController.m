@@ -70,36 +70,38 @@ int check = 0;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSString *cellIdentify = @"FavoriteTableViewCell" ;
-    FavoriteTableViewCell *cell = [self.tbl dequeueReusableCellWithIdentifier:cellIdentify] ;
+    FoodCell *cell = [self.tbl dequeueReusableCellWithIdentifier:cellIdentify] ;
     
     if (!cell) {
         //[_foodImage sd_setImageWithURL:[NSURL URLWithString:food.imgUrl] placeholderImage:nil];
-        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FavoriteTableViewCell" owner:nil options:nil];
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FoodCell" owner:nil options:nil];
         cell = nib[0];
+        cell.type = FoodCellTypeFavorite;
         cell.selectionStyle = UITableViewCellSelectionStyleNone ;
-        cell.delegate = self ;
+//        cell.delegate = self ;
         
     }
     
     Food *food = _foodList[indexPath.row] ;
-    NSString *link = food.imgUrl ;
-    
-    [cell.img_food sd_setImageWithURL:[NSURL URLWithString: link] placeholderImage : nil];
-    [cell setFood:_foodList[indexPath.row]];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone ;
-    cell.delegate = self ;
-    if (check == 1) {
-        BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
-        [cell setEditting:isHas];
-    } else {
-        
-    }
+    [cell displayWithFood:food];
+//    NSString *link = food.imgUrl ;
+//    
+//    [cell.img_food sd_setImageWithURL:[NSURL URLWithString: link] placeholderImage : nil];
+//    [cell setFood:_foodList[indexPath.row]];
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone ;
+//    cell.delegate = self ;
+//    if (check == 1) {
+//        BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
+//        [cell setEditting:isHas];
+//    } else {
+//        
+//    }
     
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 150 ;
+    return 100;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath ;
