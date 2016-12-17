@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @import Charts ;
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<EMEmojiableBtnDelegate , UITableViewDataSource , UITableViewDelegate>
 @property (weak , nonatomic) Food *food;
 @property (weak, nonatomic) IBOutlet BarChartView *barChartView;
 

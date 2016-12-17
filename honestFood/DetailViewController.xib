@@ -19,7 +19,10 @@
             <connections>
                 <outlet property="barChartView" destination="GPU-4g-8nJ" id="LHP-2l-KMV"/>
                 <outlet property="btnBack" destination="cdP-NO-91G" id="UUp-ov-x7q"/>
+                <outlet property="lblComment" destination="ey5-T9-OR6" id="jv6-WY-Vc9"/>
                 <outlet property="lblTitle" destination="rDY-51-sA6" id="p9d-4c-eG9"/>
+                <outlet property="scrollView" destination="rqM-3w-P9A" id="V52-v2-0gv"/>
+                <outlet property="tbl" destination="IRA-oY-Kvi" id="LE8-I9-LVy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -102,13 +105,43 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-Pa-IUB">
+                                    <rect key="frame" x="6" y="385" width="362" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment ( 30 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-T9-OR6">
+                                            <rect key="frame" x="16" y="5" width="120" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="ey5-T9-OR6" firstAttribute="centerY" secondItem="1oi-Pa-IUB" secondAttribute="centerY" id="LVk-Kz-Ziz"/>
+                                        <constraint firstItem="ey5-T9-OR6" firstAttribute="leading" secondItem="1oi-Pa-IUB" secondAttribute="leading" constant="16" id="Tcl-b3-Imf"/>
+                                        <constraint firstAttribute="height" constant="30" id="lR6-Mg-xya"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-oY-Kvi">
+                                    <rect key="frame" x="6" y="415" width="362" height="237"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="237" id="2Db-em-QyQ"/>
+                                    </constraints>
+                                </tableView>
                             </subviews>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="oAX-lr-UxB" secondAttribute="bottom" constant="256" id="EsL-lY-MZ1"/>
+                                <constraint firstAttribute="bottom" secondItem="IRA-oY-Kvi" secondAttribute="bottom" id="26J-HG-Qqg"/>
+                                <constraint firstItem="IRA-oY-Kvi" firstAttribute="trailing" secondItem="1oi-Pa-IUB" secondAttribute="trailing" id="8CX-bk-5Zh"/>
+                                <constraint firstItem="IRA-oY-Kvi" firstAttribute="top" secondItem="1oi-Pa-IUB" secondAttribute="bottom" id="A7n-o9-Dbt"/>
                                 <constraint firstItem="oAX-lr-UxB" firstAttribute="leading" secondItem="rqM-3w-P9A" secondAttribute="leading" constant="6" id="L8X-SP-wzn"/>
                                 <constraint firstItem="oAX-lr-UxB" firstAttribute="top" secondItem="rqM-3w-P9A" secondAttribute="top" constant="15" id="Nh8-Tb-eyx"/>
+                                <constraint firstItem="1oi-Pa-IUB" firstAttribute="trailing" secondItem="oAX-lr-UxB" secondAttribute="trailing" id="aCm-1Y-kck"/>
+                                <constraint firstItem="IRA-oY-Kvi" firstAttribute="leading" secondItem="1oi-Pa-IUB" secondAttribute="leading" id="afD-Pe-x6C"/>
+                                <constraint firstItem="1oi-Pa-IUB" firstAttribute="leading" secondItem="oAX-lr-UxB" secondAttribute="leading" id="kzp-LH-kOo"/>
                                 <constraint firstAttribute="trailing" secondItem="oAX-lr-UxB" secondAttribute="trailing" constant="6" id="n6i-Jf-KDJ"/>
+                                <constraint firstItem="1oi-Pa-IUB" firstAttribute="top" secondItem="oAX-lr-UxB" secondAttribute="bottom" constant="60" id="rwQ-Yc-YA6"/>
                                 <constraint firstItem="oAX-lr-UxB" firstAttribute="centerX" secondItem="rqM-3w-P9A" secondAttribute="centerX" id="v4o-C6-42c"/>
                             </constraints>
                         </scrollView>

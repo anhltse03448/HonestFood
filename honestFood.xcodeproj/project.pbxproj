@@ -20,6 +20,9 @@
 		36D67F951E0550C0001BB91E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F931E0550C0001BB91E /* DetailViewController.xib */; };
 		36D67FA21E055CFA001BB91E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67F9D1E055CDC001BB91E /* Charts.framework */; };
 		36D67FA31E055CFA001BB91E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67F9D1E055CDC001BB91E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36D67FB51E057883001BB91E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FB31E057883001BB91E /* CommentTableViewCell.m */; };
+		36D67FB61E057883001BB91E /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67FB41E057883001BB91E /* CommentTableViewCell.xib */; };
+		36D67FB91E0578B5001BB91E /* CommentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FB81E0578B5001BB91E /* CommentObject.m */; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -190,6 +193,11 @@
 		36D67F921E0550C0001BB91E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		36D67F931E0550C0001BB91E /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		36D67F961E055CDC001BB91E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		36D67FB21E057883001BB91E /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		36D67FB31E057883001BB91E /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		36D67FB41E057883001BB91E /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		36D67FB71E0578B5001BB91E /* CommentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentObject.h; sourceTree = "<group>"; };
+		36D67FB81E0578B5001BB91E /* CommentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentObject.m; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -401,10 +409,13 @@
 		36D67F8D1E05506B001BB91E /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				36D67FAC1E05784C001BB91E /* DetailTableViewCell */,
 				36D67F961E055CDC001BB91E /* Charts.xcodeproj */,
 				36D67F911E0550C0001BB91E /* DetailViewController.h */,
 				36D67F921E0550C0001BB91E /* DetailViewController.m */,
 				36D67F931E0550C0001BB91E /* DetailViewController.xib */,
+				36D67FB71E0578B5001BB91E /* CommentObject.h */,
+				36D67FB81E0578B5001BB91E /* CommentObject.m */,
 			);
 			name = DetailViewController;
 			sourceTree = "<group>";
@@ -417,6 +428,16 @@
 				36D67FA11E055CDC001BB91E /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		36D67FAC1E05784C001BB91E /* DetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				36D67FB21E057883001BB91E /* CommentTableViewCell.h */,
+				36D67FB31E057883001BB91E /* CommentTableViewCell.m */,
+				36D67FB41E057883001BB91E /* CommentTableViewCell.xib */,
+			);
+			name = DetailTableViewCell;
 			sourceTree = "<group>";
 		};
 		6E76ECDD1E04D54800BF32C4 = {
@@ -746,6 +767,7 @@
 				6E76ED9F1E0521EB00BF32C4 /* food-holder.png in Resources */,
 				6E76EDD11E05698C00BF32C4 /* img_6.png in Resources */,
 				6E76ED841E04EE4700BF32C4 /* MyAccountController.xib in Resources */,
+				36D67FB61E057883001BB91E /* CommentTableViewCell.xib in Resources */,
 				6E76EDCF1E05698C00BF32C4 /* img_5@2x.png in Resources */,
 				6E76ECF91E04D54900BF32C4 /* LaunchScreen.storyboard in Resources */,
 				36D67F661E050E8D001BB91E /* LoginViewController.xib in Resources */,
@@ -854,6 +876,7 @@
 				6E76ED6A1E04EE4700BF32C4 /* FoodCategoryCell.m in Sources */,
 				6E76ED831E04EE4700BF32C4 /* MyAccountController.m in Sources */,
 				6E76ED991E051D0900BF32C4 /* BlogController.m in Sources */,
+				36D67FB51E057883001BB91E /* CommentTableViewCell.m in Sources */,
 				6E76ED811E04EE4700BF32C4 /* MenuController.m in Sources */,
 				36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */,
 				6E76ED7A1E04EE4700BF32C4 /* ListItemInCartView.m in Sources */,
@@ -875,6 +898,7 @@
 				6E76ED681E04EE4700BF32C4 /* Food.m in Sources */,
 				6E76ED791E04EE4700BF32C4 /* KLCPopup.m in Sources */,
 				6E76ED741E04EE4700BF32C4 /* GalleryController.m in Sources */,
+				36D67FB91E0578B5001BB91E /* CommentObject.m in Sources */,
 				6E76ECEB1E04D54900BF32C4 /* main.m in Sources */,
 				6E76ED931E04F5E000BF32C4 /* NSDate+MDCalendar.m in Sources */,
 				6E76ED761E04EE4700BF32C4 /* GlobalVar.m in Sources */,

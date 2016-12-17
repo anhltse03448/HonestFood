@@ -16,7 +16,7 @@
 
 
 
-#define kAPIBaseUrl                         @"http://192.168.43.226:8080/"
+#define kAPIBaseUrl                         @"http://192.168.43.42:8080/"
 #define kAPIGetListFoodCat                  @"getlistfoodcat"
 #define kAPIGetListFood                     @"getlistfood"
 #define kAPIGetHistoryOrder                 @"gethistoryorder"
