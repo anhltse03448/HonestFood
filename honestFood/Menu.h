@@ -24,6 +24,6 @@
 +(Menu*)menuWithTitle:(NSString*)title icon:(UIImage*)icon navi:(UINavigationController*)navi;
 +(NavigationController*)naviCart;
 +(NavigationController*)naviHistory;
-
++(NavigationController*)naviFav ;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Menu.h"
+#import "FavoriteViewController.h"
 
 @implementation Menu
 
@@ -68,6 +69,12 @@
     return naviHistory;
 }
 
++(NavigationController*)naviFav
+{
+    FavoriteViewController *favorite = [[FavoriteViewController alloc] initWithNibName:@"FavoriteViewController" bundle:nil];
+    NavigationController *naviHistory = [[NavigationController alloc]initWithRootViewController:favorite];
+    return naviHistory;
+}
 
 
 

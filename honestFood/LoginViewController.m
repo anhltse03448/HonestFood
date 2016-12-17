@@ -1,40 +1,24 @@
 //
-//  LoginController.m
-//  HackathonFacebook
+//  LoginViewController.m
+//  honestFood
 //
-//  Created by Tuan Vu on 12/14/16.
+//  Created by Anh Tuan on 12/17/16.
 //  Copyright © 2016 tuanvu. All rights reserved.
 //
 
-#import "LoginController.h"
+#import "LoginViewController.h"
 
-@interface LoginController ()
-@property (weak, nonatomic) IBOutlet UIImageView *appicon;
-@property (weak, nonatomic) IBOutlet UIButton *btnFbLogin;
-
+@interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 
 @end
 
-@implementation LoginController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
-- (IBAction)btnLoginDidTap:(id)sender {
-    
-    [Menu settingSlideMenuController];
-    
-    
-    
-}
-
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,5 +34,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)btnLoginTouchUp:(id)sender {
+}
 
 @end

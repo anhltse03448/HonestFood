@@ -65,7 +65,7 @@ static NSString *foodCategoryCellId  = @"foodCategoryCellId";
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
 //     _plusButtonsViewMain = [[LGPlusButtonsView alloc]initWithNumberOfButtons:4 firstButtonIsPlusButton:YES showAfterInit:YES];
 //    _plusButtonsViewMain.observedScrollView = self.collection;
 //    _plusButtonsViewMain.coverColor = [UIColor colorWithWhite:1.f alpha:0.7];
