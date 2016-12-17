@@ -47,6 +47,8 @@
 
 - (void)setFood:(Food*)food;
 {
+    self.check.hidden = true;
+    self.img2.hidden = false ;
     [self.lblName setText:food.foodName ] ;
     if (food.note != NULL) {
       //[self.lblType setText:food.note ] ;
@@ -67,7 +69,7 @@
     }
 }
 
-- (void)setEditting:(BOOL )check ;
+- (void)setEditting:(BOOL )check;
 {
     self.img1.hidden = true;
     self.img2.hidden = true;

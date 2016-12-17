@@ -27,4 +27,5 @@
 
 
 - (void)setFood:(Food*)food;
+- (void)setEditting:(BOOL )check ;
 @end
