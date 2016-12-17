@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 @property (weak, nonatomic) IBOutlet UIImageView *img_food;
 @property (weak, nonatomic) IBOutlet UILabel *lblType;
+@property (weak, nonatomic) IBOutlet UIImageView *check;
 @property (nonatomic,weak) id <SomethingDelegate> delegate;
 
 

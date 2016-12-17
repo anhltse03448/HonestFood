@@ -12,8 +12,9 @@
 @interface FavoriteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tbl;
 @property (nonatomic,strong) NSMutableArray *foodList;
-@end
 
+@end
+int check = 0;
 @implementation FavoriteViewController
 
 - (void)viewDidLoad {
@@ -62,12 +63,18 @@
     FavoriteTableViewCell *cell = [self.tbl dequeueReusableCellWithIdentifier:cellIdentify] ;
     
     if (!cell) {
-        
+        //[_foodImage sd_setImageWithURL:[NSURL URLWithString:food.imgUrl] placeholderImage:nil];
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FavoriteTableViewCell" owner:nil options:nil];
         cell = nib[0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone ;
         cell.delegate = self ;
+        
     }
+    
+    Food *food = _foodList[indexPath.row] ;
+    NSString *link = food.imgUrl ;
+    
+    [cell.img_food sd_setImageWithURL:[NSURL URLWithString: link] placeholderImage : nil];
     [cell setFood:_foodList[indexPath.row]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone ;
     cell.delegate = self ;
@@ -102,6 +109,10 @@
     }
     
     [self.tbl reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+-(void)cartViewDidTap:(UIBarButtonItem*)item
+{
+    check = ( check + 1) % 2 ;
 }
 
 @end

@@ -67,4 +67,16 @@
     }
 }
 
+- (void)setEditting:(BOOL )check ;
+{
+    self.img1.hidden = true;
+    self.img2.hidden = true;
+    self.check.hidden = false ;
+    if (check == true) {
+        self.check.image = [ UIImage imageNamed:@"check"];
+    } else {
+        self.check.image = [UIImage imageNamed:@"nocheck"];        
+    }
+}
+
 @end
