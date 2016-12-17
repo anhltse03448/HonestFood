@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController">
+            <connections>
+                <outlet property="appicon" destination="ffs-Gj-scn" id="Bmb-GS-Q76"/>
+                <outlet property="btnFbLogin" destination="sTZ-ey-AwK" id="Ue5-Qn-mif"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-ey-AwK">
+                    <rect key="frame" x="106" y="269" width="108" height="30"/>
+                    <state key="normal" title="Login Facebook"/>
+                    <connections>
+                        <action selector="btnLoginDidTap:" destination="-1" eventType="touchUpInside" id="iU1-8e-xWH"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="io7-isome-icon-P.png" translatesAutoresizingMaskIntoConstraints="NO" id="ffs-Gj-scn">
+                    <rect key="frame" x="85" y="99" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ffs-Gj-scn" secondAttribute="height" id="X43-GT-ZCN"/>
+                        <constraint firstAttribute="width" constant="150" id="naC-G1-KgW"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ffs-Gj-scn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gu3-w7-r63"/>
+                <constraint firstItem="sTZ-ey-AwK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="NIs-CM-iW6"/>
+                <constraint firstItem="sTZ-ey-AwK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YVI-A9-kci"/>
+                <constraint firstItem="sTZ-ey-AwK" firstAttribute="top" secondItem="ffs-Gj-scn" secondAttribute="bottom" constant="20" id="rea-rA-hG7"/>
+            </constraints>
+            <point key="canvasLocation" x="-59" y="-63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="io7-isome-icon-P.png" width="1024" height="1024"/>
+    </resources>
+</document>

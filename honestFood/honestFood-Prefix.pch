@@ -9,6 +9,44 @@
 #ifndef honestFood_Prefix_pch
 #define honestFood_Prefix_pch
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FontAwesomeKit/FontAwesomeKit.h>
+#import <CarbonKit/CarbonKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <KRLCollectionViewGridLayout/KRLCollectionViewGridLayout.h>
+#import <INSPullToRefresh/UIScrollView+INSPullToRefresh.h>
+#import <HexColors/HexColors.h>
+#import <FontAwesomeKit/FontAwesomeKit.h>
+#import <DZNSegmentedControl/DZNSegmentedControl.h>
+#import <MMDrawerController/MMDrawerController.h>
+#import <MMDrawerController/UIViewController+MMDrawerController.h>
+#import <LGPlusButtonsView/LGPlusButtonsView.h>
+
+
+
+#import "Menu.h"
+#import "MenuController.h"
+#import "GalleryController.h"
+#import "AppConstant.h"
+#import "NavigationController.h"
+#import "UserDefaults.h"
+#import "BaseController.h"
+#import "BaseCollectionController.h"
+#import "UIImage+FontAwesome.h"
+#import "CartView.h"
+#import "KLCPopup.h"
+#import "AppService.h"
+#import "FoodCategory.h"
+#import "ListItemInCartView.h"
+#import "GlobalVar.h"
+#import "FoodCell.h"
+#import "FoodCategoryController.h"
+#import "CartController.h"
+#import "NSMutableArray+Food.h"
+#import "NSDate+MDCalendar.h"
+#import "HistoryController.h"
+#import "Utils.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
