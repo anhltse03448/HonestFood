@@ -14,6 +14,8 @@
 		36D67F711E050EB6001BB91E /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F6F1E050EB6001BB91E /* FavoriteTableViewCell.m */; };
 		36D67F721E050EB6001BB91E /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F701E050EB6001BB91E /* FavoriteTableViewCell.xib */; };
 		36D67F871E050EDA001BB91E /* Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F861E050EDA001BB91E /* Delegate.m */; };
+		36D67F8A1E053C08001BB91E /* FacebookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F891E053C08001BB91E /* FacebookAPI.m */; };
+		36D67F8C1E0542FC001BB91E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67F8B1E0542FC001BB91E /* FBSDKShareKit.framework */; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -107,6 +109,9 @@
 		36D67F841E050ECA001BB91E /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
 		36D67F851E050ECA001BB91E /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
 		36D67F861E050EDA001BB91E /* Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delegate.m; sourceTree = "<group>"; };
+		36D67F881E053C08001BB91E /* FacebookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAPI.h; sourceTree = "<group>"; };
+		36D67F891E053C08001BB91E /* FacebookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAPI.m; sourceTree = "<group>"; };
+		36D67F8B1E0542FC001BB91E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -221,6 +226,7 @@
 			files = (
 				58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */,
 				6E76ED0A1E04EDEC00BF32C4 /* FBSDKCoreKit.framework in Frameworks */,
+				36D67F8C1E0542FC001BB91E /* FBSDKShareKit.framework in Frameworks */,
 				6E76ED0B1E04EDEC00BF32C4 /* FBSDKLoginKit.framework in Frameworks */,
 				6E76ED8F1E04EF3A00BF32C4 /* Bolts.framework in Frameworks */,
 			);
@@ -428,6 +434,8 @@
 				36D67F731E050EB9001BB91E /* Font */,
 				6E76ED911E04F5E000BF32C4 /* NSDate+MDCalendar.h */,
 				6E76ED921E04F5E000BF32C4 /* NSDate+MDCalendar.m */,
+				36D67F881E053C08001BB91E /* FacebookAPI.h */,
+				36D67F891E053C08001BB91E /* FacebookAPI.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -467,6 +475,7 @@
 				6E76ED8E1E04EF3A00BF32C4 /* Bolts.framework */,
 				6E76ED081E04EDEC00BF32C4 /* FBSDKCoreKit.framework */,
 				6E76ED091E04EDEC00BF32C4 /* FBSDKLoginKit.framework */,
+				36D67F8B1E0542FC001BB91E /* FBSDKShareKit.framework */,
 				F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */,
 			);
 			name = Frameworks;
@@ -506,7 +515,7 @@
 				TargetAttributes = {
 					6E76ECE51E04D54800BF32C4 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NRHH4484E4;
+						DevelopmentTeam = 58T94JVAD5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -623,6 +632,7 @@
 			files = (
 				36D67F651E050E8D001BB91E /* LoginViewController.m in Sources */,
 				6E76ED7E1E04EE4700BF32C4 /* Menu.m in Sources */,
+				36D67F8A1E053C08001BB91E /* FacebookAPI.m in Sources */,
 				6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */,
 				6E76ED8C1E04EE4700BF32C4 /* UserDefaults.m in Sources */,
 				6E76ED881E04EE4700BF32C4 /* RACollectionViewReorderableTripletLayout.m in Sources */,
@@ -783,7 +793,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = honestFood/honestFood.entitlements;
-				DEVELOPMENT_TEAM = NRHH4484E4;
+				DEVELOPMENT_TEAM = 58T94JVAD5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -803,7 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = honestFood/honestFood.entitlements;
-				DEVELOPMENT_TEAM = NRHH4484E4;
+				DEVELOPMENT_TEAM = 58T94JVAD5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
