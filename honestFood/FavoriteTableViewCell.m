@@ -22,7 +22,7 @@
     
     
     [self.img1 setUserInteractionEnabled:true] ;
-    UITapGestureRecognizer *gesture1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(img2_tap:)];
+    UITapGestureRecognizer *gesture1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(img1_tap:)];
     [self.img1 addGestureRecognizer:gesture1] ;
 }
 
@@ -48,7 +48,12 @@
 - (void)setFood:(Food*)food;
 {
     [self.lblName setText:food.foodName ] ;
-    [self.lblType setText:food.note ] ;
+    if (food.note != NULL) {
+      //[self.lblType setText:food.note ] ;
+    } else {
+        
+    }
+    //[self.lblType setText:food.note ] ;
     if (food.quantity.integerValue != 0) {
         _img1.hidden = false ;
         _img2.image = [ UIImage imageNamed:@"img_add"] ;

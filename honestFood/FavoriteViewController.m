@@ -68,7 +68,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone ;
         cell.delegate = self ;
     }
-    
+    [cell setFood:_foodList[indexPath.row]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone ;
     cell.delegate = self ;
     
