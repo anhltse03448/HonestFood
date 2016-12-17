@@ -30,6 +30,7 @@ static NSString *menuCellID = @"MenuCellID";
     [_listMenu addObject:[Menu menuWithTitle:@"Cart" icon:[UIImage fbImage] navi:[Menu naviCart]]];
     [_listMenu addObject:[Menu menuWithTitle:@"History" icon:[UIImage fbImage] navi:[Menu naviHistory]]];
     [_listMenu addObject:[Menu menuWithTitle:@"Favorite" icon:[UIImage fbImage] navi:[Menu naviFav]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Profile" icon:[UIImage fbImage] navi:[Menu navProfile]]];
     
     _tblMenu.rowHeight = 50.0f;
     _tblMenu.backgroundColor = kAppColor;

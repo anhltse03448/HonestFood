@@ -23,6 +23,8 @@
 		36D67FB51E057883001BB91E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FB31E057883001BB91E /* CommentTableViewCell.m */; };
 		36D67FB61E057883001BB91E /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67FB41E057883001BB91E /* CommentTableViewCell.xib */; };
 		36D67FB91E0578B5001BB91E /* CommentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FB81E0578B5001BB91E /* CommentObject.m */; };
+		36D67FBE1E058A22001BB91E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FBC1E058A22001BB91E /* ProfileViewController.m */; };
+		36D67FBF1E058A22001BB91E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67FBD1E058A22001BB91E /* ProfileViewController.xib */; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -198,6 +200,9 @@
 		36D67FB41E057883001BB91E /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		36D67FB71E0578B5001BB91E /* CommentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentObject.h; sourceTree = "<group>"; };
 		36D67FB81E0578B5001BB91E /* CommentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentObject.m; sourceTree = "<group>"; };
+		36D67FBB1E058A22001BB91E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		36D67FBC1E058A22001BB91E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		36D67FBD1E058A22001BB91E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -440,6 +445,16 @@
 			name = DetailTableViewCell;
 			sourceTree = "<group>";
 		};
+		36D67FBA1E0589CC001BB91E /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36D67FBB1E058A22001BB91E /* ProfileViewController.h */,
+				36D67FBC1E058A22001BB91E /* ProfileViewController.m */,
+				36D67FBD1E058A22001BB91E /* ProfileViewController.xib */,
+			);
+			name = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		6E76ECDD1E04D54800BF32C4 = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +628,7 @@
 		6E76ED941E04F9F300BF32C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36D67FBA1E0589CC001BB91E /* ProfileViewController */,
 				36D67F8D1E05506B001BB91E /* DetailViewController */,
 				6E76ED951E051CCB00BF32C4 /* BlogController */,
 				36D67F671E050E9B001BB91E /* FavoriteViewController */,
@@ -794,6 +810,7 @@
 				6E76ED711E04EE4700BF32C4 /* FoodCell.xib in Resources */,
 				6E76EDC41E05698C00BF32C4 /* img_1@3x.png in Resources */,
 				6E76EDC61E05698C00BF32C4 /* img_2@2x.png in Resources */,
+				36D67FBF1E058A22001BB91E /* ProfileViewController.xib in Resources */,
 				36D67F6C1E050EA9001BB91E /* FavoriteViewController.xib in Resources */,
 				6E76EDC21E05698C00BF32C4 /* img_1.png in Resources */,
 				6E76EDD21E05698C00BF32C4 /* img_6@2x.png in Resources */,
@@ -897,6 +914,7 @@
 				6E76ED891E04EE4700BF32C4 /* RACollectionViewTripletLayout.m in Sources */,
 				6E76ED681E04EE4700BF32C4 /* Food.m in Sources */,
 				6E76ED791E04EE4700BF32C4 /* KLCPopup.m in Sources */,
+				36D67FBE1E058A22001BB91E /* ProfileViewController.m in Sources */,
 				6E76ED741E04EE4700BF32C4 /* GalleryController.m in Sources */,
 				36D67FB91E0578B5001BB91E /* CommentObject.m in Sources */,
 				6E76ECEB1E04D54900BF32C4 /* main.m in Sources */,

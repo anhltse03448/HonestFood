@@ -25,5 +25,6 @@
 +(NavigationController*)naviCart;
 +(NavigationController*)naviHistory;
 +(NavigationController*)naviFav ;
++(NavigationController*)navProfile;
 
 @end

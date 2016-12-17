@@ -8,7 +8,7 @@
 
 #import "Menu.h"
 #import "FavoriteViewController.h"
-
+#import "ProfileViewController.h"
 @implementation Menu
 
 +(Menu*)menuWithTitle:(NSString*)title icon:(UIImage*)icon navi:(UINavigationController*)navi
@@ -76,8 +76,12 @@
     return naviHistory;
 }
 
-
-
++(NavigationController*)navProfile
+{
+    ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    NavigationController *naviHistory = [[NavigationController alloc]initWithRootViewController:profile];
+    return naviHistory;
+}
 
 +(NSArray*)segment
 {
