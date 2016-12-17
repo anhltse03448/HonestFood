@@ -10,6 +10,10 @@
 #import "Food.h"
 
 
+
+
+
+
 @implementation FavoriteTableViewCell
 
 
@@ -24,7 +28,11 @@
     [self.img1 setUserInteractionEnabled:true] ;
     UITapGestureRecognizer *gesture1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(img1_tap:)];
     [self.img1 addGestureRecognizer:gesture1] ;
+    
+    _img_food.layer.masksToBounds = YES;
 }
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

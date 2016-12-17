@@ -13,7 +13,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *tblCart;
 @property (strong , nonatomic) NSMutableArray *foodList;
 @property (assign , nonatomic) CartControllerType type;
+@property (weak, nonatomic) IBOutlet UIButton *btnBuy;
+@property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 
+@property (weak, nonatomic) IBOutlet UIView *actionView;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnChart;
 @end
 
 @implementation CartController
@@ -24,6 +29,8 @@
     if (self) {
         _type = type;
         _foodList = otherFoodList;
+        
+        
     }
     
     return self;
@@ -35,8 +42,13 @@
     self.tblCart.rowHeight = 100.f;
     _tblCart.emptyDataSetDelegate = [EmptyDataSourceDelegate sharedInstance];
     _tblCart.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
+    
+    _actionView.backgroundColor = kAppColor;
+    
+    [_btnChart setImage:[UIImage barChartImage] forState:UIControlStateNormal];
     // Do any additional setup after loading the view from its nib.
 }
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -46,6 +58,12 @@
     if (_type == CartControllerTypeNew) {
         [self settingLeftMenuBars];
         [self settingRightMenuBars];
+    }
+    
+    _lblPrice.text = [Utils totalPriceWithListFood:_foodList];
+    if (_type == CartControllerTypeHistory) {
+        
+        [_btnBuy setTitle:@"Re-Buy" forState:UIControlStateNormal];
     }
     
     [self.tblCart reloadData];
@@ -76,6 +94,11 @@
     listItemInCartView.frame = CGRectMake(0, 0, kscreenWidth - 20, kscreenHeight - 130);
     listItemInCartView.layer.cornerRadius = 10.0f;
     listItemInCartView.layer.masksToBounds = YES;
+    
+     listItemInCartView.moveToWindow = ^()
+    {
+        [_tblCart reloadData];
+    };
     
     KLCPopup* popup =  [KLCPopup popupWithContentView:listItemInCartView showType:KLCPopupShowTypeFadeIn dismissType:KLCPopupDismissTypeFadeOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
     
@@ -118,8 +141,27 @@
     }
     Food *food = _foodList[indexPath.row];
     [cell displayWithFood:food];
+    
+    if (_type == CartControllerTypeHistory) {
+        
+        [cell hiddenActionButton];
+    }
     return cell;
 }
+- (IBAction)btnBuyDidTap:(id)sender {
+    
+    if (_type == CartControllerTypeNew) {
+        
+    }
+    if (_type == CartControllerTypeHistory) {
+        
+    }
+    
+}
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

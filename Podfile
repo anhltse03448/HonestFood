@@ -17,6 +17,8 @@ pod 'DZNEmptyDataSet'
 pod 'LGPlusButtonsView'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
+pod 'SWTableViewCell'
+pod 'EMEmojiableBtn'
 
 
 end

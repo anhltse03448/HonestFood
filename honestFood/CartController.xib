@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartController">
             <connections>
+                <outlet property="actionView" destination="ozr-7W-c0V" id="Bdx-IW-EQ0"/>
+                <outlet property="btnBuy" destination="KmN-d2-si3" id="UwA-nh-Oaq"/>
+                <outlet property="btnChart" destination="Wli-lc-GXR" id="dgg-Uz-zJv"/>
+                <outlet property="lblPrice" destination="nVE-aY-4zy" id="h00-4r-j0U"/>
                 <outlet property="tblCart" destination="IPl-sj-2eW" id="esy-KX-umf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,29 +28,43 @@
                     <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmN-d2-si3">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="Zam-PP-ZBR"/>
+                                <constraint firstAttribute="width" constant="80" id="Zam-PP-ZBR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <state key="normal" title="Buy"/>
+                            <state key="normal" title="Buy">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnBuyDidTap:" destination="-1" eventType="touchUpInside" id="GaW-PY-iKA"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-aY-4zy">
-                            <rect key="frame" x="60" y="12" width="310" height="18"/>
+                            <rect key="frame" x="333" y="11" width="37" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-lc-GXR">
+                            <rect key="frame" x="162" y="0.0" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="oJe-Fh-s6J"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="nVE-aY-4zy" secondAttribute="trailing" constant="5" id="4nR-yz-QmN"/>
-                        <constraint firstItem="nVE-aY-4zy" firstAttribute="leading" secondItem="KmN-d2-si3" secondAttribute="trailing" constant="10" id="7pj-zn-1HV"/>
+                        <constraint firstAttribute="bottom" secondItem="Wli-lc-GXR" secondAttribute="bottom" id="B78-8n-dwW"/>
                         <constraint firstAttribute="bottom" secondItem="KmN-d2-si3" secondAttribute="bottom" id="abH-Mf-IIj"/>
                         <constraint firstAttribute="height" constant="40" id="f7s-QM-2rj"/>
                         <constraint firstItem="nVE-aY-4zy" firstAttribute="centerY" secondItem="ozr-7W-c0V" secondAttribute="centerY" id="mXh-33-moX"/>
+                        <constraint firstItem="Wli-lc-GXR" firstAttribute="top" secondItem="ozr-7W-c0V" secondAttribute="top" id="r8y-Mf-CO2"/>
                         <constraint firstItem="KmN-d2-si3" firstAttribute="leading" secondItem="ozr-7W-c0V" secondAttribute="leading" id="u0n-3V-6vR"/>
                         <constraint firstItem="KmN-d2-si3" firstAttribute="top" secondItem="ozr-7W-c0V" secondAttribute="top" id="uWK-s7-V1u"/>
+                        <constraint firstItem="Wli-lc-GXR" firstAttribute="centerX" secondItem="ozr-7W-c0V" secondAttribute="centerX" id="ubH-NO-0Fc"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="IPl-sj-2eW">
@@ -68,7 +86,7 @@
                 <constraint firstAttribute="trailing" secondItem="IPl-sj-2eW" secondAttribute="trailing" id="u0r-52-Jvj"/>
                 <constraint firstItem="ozr-7W-c0V" firstAttribute="top" secondItem="IPl-sj-2eW" secondAttribute="bottom" id="xaA-Ll-wrO"/>
             </constraints>
-            <point key="canvasLocation" x="-119" y="53"/>
+            <point key="canvasLocation" x="-212" y="25"/>
         </view>
     </objects>
 </document>

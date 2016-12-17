@@ -36,20 +36,30 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y55-pB-YS4">
-                            <rect key="frame" x="60" y="16" width="305" height="18"/>
+                            <rect key="frame" x="217.5" y="16" width="147.5" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-zO-tFb">
+                            <rect key="frame" x="162.5" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="x9S-2M-j8K"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WgA-zO-tFb" secondAttribute="bottom" id="Ly4-VY-5tM"/>
                         <constraint firstItem="Xga-xv-rGl" firstAttribute="leading" secondItem="yFv-r8-Dtl" secondAttribute="leading" id="RQ9-cG-uDc"/>
+                        <constraint firstItem="Y55-pB-YS4" firstAttribute="leading" secondItem="WgA-zO-tFb" secondAttribute="trailing" constant="5" id="SQv-sm-qDJ"/>
                         <constraint firstItem="Y55-pB-YS4" firstAttribute="centerY" secondItem="yFv-r8-Dtl" secondAttribute="centerY" id="Zhb-pJ-hK7"/>
                         <constraint firstAttribute="trailing" secondItem="Y55-pB-YS4" secondAttribute="trailing" constant="10" id="Zrc-2e-bnr"/>
                         <constraint firstItem="Xga-xv-rGl" firstAttribute="top" secondItem="yFv-r8-Dtl" secondAttribute="top" id="dMg-XP-buW"/>
-                        <constraint firstItem="Y55-pB-YS4" firstAttribute="leading" secondItem="Xga-xv-rGl" secondAttribute="trailing" constant="10" id="dVU-cX-ttm"/>
                         <constraint firstAttribute="bottom" secondItem="Xga-xv-rGl" secondAttribute="bottom" id="l4j-yN-zjP"/>
+                        <constraint firstItem="WgA-zO-tFb" firstAttribute="top" secondItem="yFv-r8-Dtl" secondAttribute="top" id="nws-Wz-0dg"/>
+                        <constraint firstItem="WgA-zO-tFb" firstAttribute="centerX" secondItem="yFv-r8-Dtl" secondAttribute="centerX" id="xsL-gq-pDS"/>
                         <constraint firstAttribute="height" constant="50" id="xyw-Ka-6dG"/>
                     </constraints>
                 </view>
@@ -66,6 +76,7 @@
             </constraints>
             <connections>
                 <outlet property="btnBuy" destination="Xga-xv-rGl" id="pS0-p0-JzO"/>
+                <outlet property="btnChart" destination="WgA-zO-tFb" id="TqN-WE-GEU"/>
                 <outlet property="lblPrice" destination="Y55-pB-YS4" id="Rwg-bX-juv"/>
                 <outlet property="tblItems" destination="pye-Er-xaQ" id="SCE-xu-4xs"/>
                 <outlet property="viewCartInfo" destination="yFv-r8-Dtl" id="kIN-qq-qhP"/>

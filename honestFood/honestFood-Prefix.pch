@@ -23,6 +23,8 @@
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
 #import <LGPlusButtonsView/LGPlusButtonsView.h>
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <SWTableViewCell/SWTableViewCell.h>
+#import <EMEmojiableBtn/EMEmojiableBtn.h>
 
 
 
@@ -36,6 +38,7 @@
 #import "BaseCollectionController.h"
 #import "UIImage+FontAwesome.h"
 #import "CartView.h"
+
 #import "KLCPopup.h"
 #import "AppService.h"
 #import "FoodCategory.h"

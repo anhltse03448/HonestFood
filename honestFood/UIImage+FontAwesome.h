@@ -27,6 +27,9 @@
 +(UIImage*)moreImage;
 +(UIImage*)searchImage;
 
++(UIImage*)barChartImage;
+
+
 
 
 

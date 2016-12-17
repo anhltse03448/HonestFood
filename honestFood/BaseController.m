@@ -69,6 +69,11 @@
 
     ListItemInCartView *listItemInCartView = [ListItemInCartView sharedInstance];
     
+    listItemInCartView.moveToWindow = ^()
+    {
+        [self performSelector:@selector(reloadScrollView) withObject:nil];
+    };
+    
     listItemInCartView.frame = CGRectMake(0, 0, kscreenWidth - 20, kscreenHeight - 130);
     listItemInCartView.layer.cornerRadius = 10.0f;
     listItemInCartView.layer.masksToBounds = YES;
@@ -79,6 +84,11 @@
     
     [popup show];
     
+}
+
+-(void)reloadScrollView
+{
+    NSLog(@"hihhiih");
 }
 
 -(void)leftDrawerButtonPress:(UIBarButtonItem*)item

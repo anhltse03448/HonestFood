@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef void (^listItemIncartMoveToWindow)();
+
+
 @interface ListItemInCartView : UIView
+
+@property listItemIncartMoveToWindow moveToWindow;
+
 
 + (instancetype)sharedInstance;
 
