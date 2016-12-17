@@ -11,10 +11,17 @@
 #import "Food.h"
 @interface FavoriteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tbl;
-@property (nonatomic,strong) NSMutableArray *foodList;
+@property (weak, nonatomic) IBOutlet UIView *viewDelete;
+@property (weak, nonatomic) IBOutlet UILabel *lblDelete;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewBottomConstrain;
 
+@property (nonatomic,strong) NSMutableArray *foodList;
+@property (nonatomic,strong) NSMutableArray *listCheck;
 @end
+
 int check = 0;
+
+
 @implementation FavoriteViewController
 
 - (void)viewDidLoad {
@@ -22,6 +29,7 @@ int check = 0;
     self.tbl.delegate = self ;
     self.tbl.dataSource = self ;
     self.tbl.separatorStyle = UITableViewCellSeparatorStyleNone ;
+    _listCheck = [[NSMutableArray alloc]init];
 }
 
 - (void)viewWillAppear:(BOOL)animated;
@@ -78,6 +86,12 @@ int check = 0;
     [cell setFood:_foodList[indexPath.row]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone ;
     cell.delegate = self ;
+    if (check == 1) {
+        BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
+        [cell setEditting:isHas];
+    } else {
+        
+    }
     
     return cell;
 }
@@ -88,11 +102,36 @@ int check = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath ;
 {
-    
+    //[_viewDelete layoutIfNeeded];
+    if (check == 0) {
+        _viewBottomConstrain.constant = 0 ;
+    } else {
+        BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
+        if (isHas == true) {
+            [_listCheck removeObject:@(indexPath.row)];
+        } else {
+            [_listCheck addObject:@(indexPath.row)];
+            if (_listCheck.count == 1) {
+                //add len
+                _viewBottomConstrain.constant = -50 ;
+            }
+        }
+        if( _listCheck.count == 0 ) {
+            //hidden
+            _viewBottomConstrain.constant = 0 ;
+            
+        }
+        [UIView animateWithDuration:0.3 animations:^{
+           // [_viewDelete layoutIfNeeded];
+            [self.view layoutIfNeeded];
+            [_lblDelete setText:[NSString stringWithFormat:@"Xóa %lu món ăn", (unsigned long)_listCheck.count]];
+        }];
+        
+    }
+    [self.tbl reloadData];
 }
 - (void)img2_tap:(UITableViewCell *)cell ;
 {
-    //NSLog(@"2") ;
     NSIndexPath *indexPath = [self.tbl indexPathForCell:cell] ;
     Food *food = _foodList[indexPath.row] ;
     food.quantity = @(food.quantity.integerValue + 1 );
@@ -113,6 +152,7 @@ int check = 0;
 -(void)cartViewDidTap:(UIBarButtonItem*)item
 {
     check = ( check + 1) % 2 ;
+    [self.tbl reloadData];
 }
 
 @end

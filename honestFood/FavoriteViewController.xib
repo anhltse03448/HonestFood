@@ -11,8 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteViewController">
             <connections>
+                <outlet property="lblDelete" destination="XxF-tp-OVE" id="h1t-pD-0KF"/>
                 <outlet property="tbl" destination="WaW-ns-Tbf" id="DWk-jr-kA7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBottomConstrain" destination="3ix-Mt-yfA" id="W98-WE-7oM"/>
+                <outlet property="viewDelete" destination="Kek-df-gH9" id="SSf-2e-c0m"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,13 +31,33 @@
                         <outlet property="delegate" destination="i5M-Pr-FkT" id="Wmo-sU-EIn"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kek-df-gH9">
+                    <rect key="frame" x="0.0" y="667" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxF-tp-OVE">
+                            <rect key="frame" x="161" y="11.5" width="54" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.29019607843137252" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="XxF-tp-OVE" firstAttribute="centerX" secondItem="Kek-df-gH9" secondAttribute="centerX" id="Gfe-xv-f1j"/>
+                        <constraint firstItem="XxF-tp-OVE" firstAttribute="centerY" secondItem="Kek-df-gH9" secondAttribute="centerY" id="j0V-VU-q4f"/>
+                        <constraint firstAttribute="height" constant="50" id="vf2-L5-dZw"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WaW-ns-Tbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3hV-of-BIm"/>
+                <constraint firstItem="Kek-df-gH9" firstAttribute="top" secondItem="WaW-ns-Tbf" secondAttribute="bottom" id="3ix-Mt-yfA"/>
                 <constraint firstAttribute="bottom" secondItem="WaW-ns-Tbf" secondAttribute="bottom" id="4MD-OB-lXz"/>
+                <constraint firstItem="Kek-df-gH9" firstAttribute="leading" secondItem="WaW-ns-Tbf" secondAttribute="leading" id="V76-UO-lg1"/>
                 <constraint firstItem="WaW-ns-Tbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dCo-1R-L8Y"/>
                 <constraint firstAttribute="trailing" secondItem="WaW-ns-Tbf" secondAttribute="trailing" id="kJ1-Nk-bk1"/>
+                <constraint firstItem="Kek-df-gH9" firstAttribute="trailing" secondItem="WaW-ns-Tbf" secondAttribute="trailing" id="tX6-VY-MAK"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="134.5"/>
         </view>
