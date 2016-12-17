@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 
+
 @end
 
 @implementation ListItemInCartView
@@ -49,6 +50,10 @@
     self.tblItems.dataSource = self;
     self.tblItems.delegate = self;
     self.tblItems.rowHeight = 80.f;
+    
+
+    self.tblItems.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
+    self.tblItems.emptyDataSetDelegate  = [EmptyDataSourceDelegate sharedInstance];
     
     _viewCartInfo.backgroundColor = kAppColor;
     

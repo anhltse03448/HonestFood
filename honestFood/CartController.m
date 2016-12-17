@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tblCart;
 @property (strong , nonatomic) NSMutableArray *foodList;
 @property (assign , nonatomic) CartControllerType type;
+
 @end
 
 @implementation CartController
@@ -32,6 +33,8 @@
     [super viewDidLoad];
     
     self.tblCart.rowHeight = 100.f;
+    _tblCart.emptyDataSetDelegate = [EmptyDataSourceDelegate sharedInstance];
+    _tblCart.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
     // Do any additional setup after loading the view from its nib.
 }
 

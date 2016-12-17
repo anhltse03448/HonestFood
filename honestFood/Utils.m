@@ -15,4 +15,17 @@
     return [NSString stringWithFormat:@"%d Tháng %d",[date day],[date month]];
  }
 
++(NSString*)totalPriceWithListFood:(NSMutableArray<Food*>*)foodList;
+{
+    double price = 0;
+    for (Food *food in foodList) {
+        price += [food.quantity integerValue] * [[food price] doubleValue];
+    }
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *result = [numberFormatter stringFromNumber:@(price)];
+    return result;
+    
+}
+
 @end

@@ -11,4 +11,6 @@
 @interface Utils : NSObject
 
 +(NSString*)stringDateFormatFrom:(NSNumber*)longDate;
++(NSString*)totalPriceWithListFood:(NSMutableArray<Food*>*)foodList;
+
 @end
