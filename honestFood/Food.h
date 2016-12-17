@@ -29,7 +29,7 @@
 @property (nonatomic , strong) NSNumber * price;
 @property (nonatomic , strong) NSNumber * quantity;
 @property (nonatomic , strong) NSString * unit;
-
+@property (nonatomic , strong) Nutrition *nutrition;
 
 @property (nonatomic , strong) NSString * imgUrl;
 
