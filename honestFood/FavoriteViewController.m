@@ -9,6 +9,7 @@
 #import "FavoriteViewController.h"
 #import "FavoriteTableViewCell.h"
 #import "Food.h"
+#import "DetailViewController.h"
 @interface FavoriteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tbl;
 @property (weak, nonatomic) IBOutlet UIView *viewDelete;
@@ -38,6 +39,7 @@ int check = 0;
 {
     [super viewWillAppear:animated];
     [self initData];
+    [self.navigationController setNavigationBarHidden:false];
 }
 
 - (void)initData;
@@ -107,6 +109,10 @@ int check = 0;
     //[_viewDelete layoutIfNeeded];
     if (check == 0) {
         _viewBottomConstrain.constant = 0 ;
+        DetailViewController *detailViewController = [[ DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil] ;
+        detailViewController.food = _foodList[indexPath.row] ;
+        [self.navigationController pushViewController:detailViewController animated:true];
+        
     } else {
         BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
         if (isHas == true) {

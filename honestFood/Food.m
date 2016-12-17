@@ -19,7 +19,7 @@
         
         _protein = dict[@"protein"];
         _carbohydrate = dict[@"carbohydrate"];
-        _protein = dict[@"protein"];
+        _fat = dict[@"fat"];
         
     }
     
@@ -46,7 +46,7 @@
         _foodName = dict[@"foodName"];
         _imgUrl = dict[@"imgUrl"];
         _price = dict[@"price"];
-        
+        _nutrition = [[Nutrition alloc]initWithDictionary:dict];
     }
     
     return self;
