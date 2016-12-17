@@ -10,5 +10,6 @@
 
 @interface FacebookAPI : NSObject
 -(void)shareFood:(Food*)food On:(UIViewController *)view ;
+-(void)inviteFriends:(UIViewController *)viewController;
 + (id)sharedManager ;
 @end

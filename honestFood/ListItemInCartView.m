@@ -46,10 +46,11 @@
 
 
 - (IBAction)btnChartDidTap:(id)sender {
-    
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kscreenWidth -60, 200)];
-    view.backgroundColor = [UIColor whiteColor];
+    CGRect frame = CGRectMake(0, 0, kscreenWidth -60, 300) ;
+    UIView *view = [Utils chartViewWithFoodList:[[GlobalVar getInstance] foodList] AndFrame:frame];
+    //UIView * view = [Utils chartViewWithFoodList:[[GlobalVar getInstance] foodList] AndFrame:];
     [Utils showChartWiewWithChart:view];
+    
     
 }
 

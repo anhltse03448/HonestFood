@@ -73,6 +73,7 @@
     
     
     CartView *cart = [CartView sharedInstance];
+    
     cart.frame = CGRectMake(0, 0, 40, 40);
     
     

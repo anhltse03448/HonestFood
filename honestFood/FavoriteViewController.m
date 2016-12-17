@@ -10,6 +10,9 @@
 #import "FavoriteTableViewCell.h"
 #import "Food.h"
 #import "DetailViewController.h"
+#import "FacebookAPI.h"
+@import FBSDKCoreKit ;
+@import FBSDKShareKit;
 @interface FavoriteViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tbl;
 @property (weak, nonatomic) IBOutlet UIView *viewDelete;
@@ -163,6 +166,20 @@ int check = 0;
 {
     check = ( check + 1) % 2 ;
     [self.tbl reloadData];
+}
+
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didCompleteWithResults:(NSDictionary *)results;
+{
+    
+}
+/**
+ Sent to the delegate when the app invite encounters an error.
+ - Parameter appInviteDialog: The FBSDKAppInviteDialog that completed.
+ - Parameter error: The error.
+ */
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didFailWithError:(NSError *)error;
+{
+    
 }
 
 @end

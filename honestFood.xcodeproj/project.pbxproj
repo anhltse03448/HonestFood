@@ -23,6 +23,9 @@
 		36D67FB91E0578B5001BB91E /* CommentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FB81E0578B5001BB91E /* CommentObject.m */; };
 		36D67FBE1E058A22001BB91E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FBC1E058A22001BB91E /* ProfileViewController.m */; };
 		36D67FBF1E058A22001BB91E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67FBD1E058A22001BB91E /* ProfileViewController.xib */; };
+		36D67FD91E059784001BB91E /* ProjectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FD81E059784001BB91E /* ProjectObject.m */; };
+		36D67FDF1E05BDF6001BB91E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67FD11E059198001BB91E /* Charts.framework */; };
+		36D67FE01E05BDF6001BB91E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67FD11E059198001BB91E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -135,6 +138,13 @@
 			remoteGlobalIDString = 06165F2E1D8110E600722320;
 			remoteInfo = ChartsTests;
 		};
+		36D67FE11E05BDF6001BB91E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,6 +154,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				36D67FE01E05BDF6001BB91E /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +205,8 @@
 		36D67FBC1E058A22001BB91E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		36D67FBD1E058A22001BB91E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		36D67FCA1E059198001BB91E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		36D67FD71E059784001BB91E /* ProjectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectObject.h; sourceTree = "<group>"; };
+		36D67FD81E059784001BB91E /* ProjectObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectObject.m; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -337,6 +350,7 @@
 				58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */,
 				6E76ED0A1E04EDEC00BF32C4 /* FBSDKCoreKit.framework in Frameworks */,
 				36D67F8C1E0542FC001BB91E /* FBSDKShareKit.framework in Frameworks */,
+				36D67FDF1E05BDF6001BB91E /* Charts.framework in Frameworks */,
 				6E76ED0B1E04EDEC00BF32C4 /* FBSDKLoginKit.framework in Frameworks */,
 				6E76ED8F1E04EF3A00BF32C4 /* Bolts.framework in Frameworks */,
 			);
@@ -429,6 +443,7 @@
 		36D67FBA1E0589CC001BB91E /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				36D67FD61E05976C001BB91E /* ProfileObject */,
 				36D67FBB1E058A22001BB91E /* ProfileViewController.h */,
 				36D67FBC1E058A22001BB91E /* ProfileViewController.m */,
 				36D67FBD1E058A22001BB91E /* ProfileViewController.xib */,
@@ -444,6 +459,15 @@
 				36D67FD51E059198001BB91E /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		36D67FD61E05976C001BB91E /* ProfileObject */ = {
+			isa = PBXGroup;
+			children = (
+				36D67FD71E059784001BB91E /* ProjectObject.h */,
+				36D67FD81E059784001BB91E /* ProjectObject.m */,
+			);
+			name = ProfileObject;
 			sourceTree = "<group>";
 		};
 		6E76ECDD1E04D54800BF32C4 = {
@@ -683,6 +707,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				36D67FE21E05BDF6001BB91E /* PBXTargetDependency */,
 			);
 			name = honestFood;
 			productName = honestFood;
@@ -892,6 +917,7 @@
 				6E76ED5E1E04EE4700BF32C4 /* AppService.m in Sources */,
 				36D67F871E050EDA001BB91E /* Delegate.m in Sources */,
 				6E76ED861E04EE4700BF32C4 /* NotificationCenter.m in Sources */,
+				36D67FD91E059784001BB91E /* ProjectObject.m in Sources */,
 				6E76ED871E04EE4700BF32C4 /* NSMutableArray+Food.m in Sources */,
 				36D67F941E0550C0001BB91E /* DetailViewController.m in Sources */,
 				6E76ED771E04EE4700BF32C4 /* HistoryController.m in Sources */,
@@ -924,6 +950,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36D67FE21E05BDF6001BB91E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 36D67FE11E05BDF6001BB91E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E76ECF21E04D54900BF32C4 /* Main.storyboard */ = {

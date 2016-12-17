@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Delegate.m"
+@import FBSDKCoreKit ;
+@import FBSDKShareKit ;
 
-@interface FavoriteViewController : BaseController<UITableViewDataSource,UITableViewDelegate, SomethingDelegate>
+@interface FavoriteViewController : BaseController<UITableViewDataSource,UITableViewDelegate, SomethingDelegate,FBSDKAppInviteDialogDelegate>
 
 @end
