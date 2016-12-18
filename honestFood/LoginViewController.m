@@ -90,6 +90,20 @@
                               [FBSDKAccessToken setCurrentAccessToken:nil];
                               NSLog(@"res :%@ ",responseObject);
                               
+                              [[GlobalVar getInstance] setUser:[[User alloc] initWithDictionary:responseObject]];
+                              
+                              if (responseObject[@"userId"]) {
+                                  
+                                  [UserDefaults setObject:responseObject[@"userId"] forKey:kUserDefaultUserID];
+                                  [Menu settingSlideMenuController];
+                                  NSLog(@"userID : %@",responseObject[@"userId"]);
+                                  [[GlobalVar getInstance] setUserId:responseObject[@"userId"]];
+                                  
+                              } 
+                              
+                              
+                              
+                              
                           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                               [hud hideAnimated:YES];
 //                              []

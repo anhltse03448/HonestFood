@@ -62,13 +62,13 @@
     
 }
 
-+(UIImage*)fbImage;
-{
-    FAKFontAwesome* icon = [FAKFontAwesome facebookSquareIconWithSize:25.0f];
-    UIImage* image = [[icon imageWithSize:CGSizeMake(25, 25)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    return image;
-    
-}
+//+(UIImage*)fbImage;
+//{
+//    FAKFontAwesome* icon = [FAKFontAwesome facebookSquareIconWithSize:25.0f];
+//    UIImage* image = [[icon imageWithSize:CGSizeMake(25, 25)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    return image;
+//    
+//}
 
 +(UIImage*)magicImage;
 {
@@ -129,10 +129,71 @@
 
 +(UIImage*)barChartImage;
 {
-    FAKFontAwesome* icon = [FAKFontAwesome barChartIconWithSize:25.0f];
+    FAKFontAwesome* icon = [FAKFontAwesome barChartIconWithSize:20];
     UIImage* image = [[icon imageWithSize:CGSizeMake(25, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     return image;
 }
+
+
++(UIImage*)menuImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome compassIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
++(UIImage*)cartImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome shoppingCartIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
++(UIImage*)historyImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome historyIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
++(UIImage*)favoriteImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome thumbsUpIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
++(UIImage*)profileImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome gearIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
++(UIImage*)locationImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome locationArrowIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
++(UIImage*)xImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome timesIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
++(UIImage*)fbImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome facebookIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
++(UIImage*)heartImage;
+{
+    FAKFontAwesome* icon = [FAKFontAwesome heartIconWithSize:20];
+    UIImage* image = [[icon imageWithSize:CGSizeMake(20, 20)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return image;
+}
+
+
 
 
 @end

@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Menu"];
+    [self setTitle:@"Menu"];    
     _listCategoryId = [NSMutableArray array];
     _listCategoryId = [@[@"1",@"2",@"3",@"4"] mutableCopy];
     items = [Menu segment];

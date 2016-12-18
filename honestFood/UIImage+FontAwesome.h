@@ -27,7 +27,29 @@
 +(UIImage*)moreImage;
 +(UIImage*)searchImage;
 
+
++(UIImage*)menuImage;
++(UIImage*)cartImage;
++(UIImage*)historyImage;
++(UIImage*)favoriteImage;
++(UIImage*)profileImage;
++(UIImage*)locationImage;
+
+
+
+
 +(UIImage*)barChartImage;
+
+
+
++(UIImage*)xImage;
+
+
+
+
++(UIImage*)heartImage;
+
+
 
 
 

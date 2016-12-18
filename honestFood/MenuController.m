@@ -16,6 +16,12 @@
 @end
 
 @implementation MenuController
+{
+    NSNumber* cartCount;
+    NSNumber* historyCount;
+    NSNumber* favCount;
+    
+}
 
 static NSString *menuCellID = @"MenuCellID";
 
@@ -25,15 +31,22 @@ static NSString *menuCellID = @"MenuCellID";
     _headerView.backgroundColor = [UIColor clearColor];
     
     
- 
+    [_userAvatr sd_setImageWithURL:[NSURL URLWithString:[[[GlobalVar getInstance] user] imgUrl]] placeholderImage:nil];
+    _lblUserName.text = [NSString stringWithFormat:@"%@ %@",[[globarVar user] firstName], [[globarVar user] lastName]];
     
+    NSLog(@"app %@",[[[GlobalVar getInstance] user] imgUrl]);
+    
+    UIImage *fav = [UIImage imageNamed:@"Favorite"];
+    UIImage *cart = [UIImage imageNamed:@"Cart"];
+    UIImage *offer = [UIImage imageNamed:@"Offer"];
+    UIImage *history = [UIImage imageNamed:@"History"];
     _listMenu = [NSMutableArray array];
     _tblMenu.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_listMenu addObject:[Menu menuWithTitle:@"Explore" icon:[UIImage fbImage] navi:[Menu naviGallery]]];
-    [_listMenu addObject:[Menu menuWithTitle:@"Cart" icon:[UIImage fbImage] navi:[Menu naviCart]]];
-    [_listMenu addObject:[Menu menuWithTitle:@"History" icon:[UIImage fbImage] navi:[Menu naviHistory]]];
-    [_listMenu addObject:[Menu menuWithTitle:@"Favorite" icon:[UIImage fbImage] navi:[Menu naviFav]]];
-    [_listMenu addObject:[Menu menuWithTitle:@"Profile" icon:[UIImage fbImage] navi:[Menu navProfile]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Menu" icon:offer navi:[Menu naviGallery]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Giỏ Hàng" icon:cart navi:[Menu naviCart]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Lịch Sử" icon:history navi:[Menu naviHistory]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Ưa Thích" icon:fav navi:[Menu naviFav]]];
+    [_listMenu addObject:[Menu menuWithTitle:@"Biểu Đồ" icon:[UIImage barChartImage] navi:[Menu navProfile]]];
     
     _tblMenu.rowHeight = 50.0f;
     UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kscreenWidth, kscreenHeight)];
@@ -48,8 +61,34 @@ static NSString *menuCellID = @"MenuCellID";
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
+    
     [super viewWillAppear:animated];
+    _userAvatr.layer.cornerRadius = _userAvatr.layer.frame.size.height / 2 ;
+    _userAvatr.layer.masksToBounds = true ;
+    [self getAllCount];
     [_tblMenu reloadData];
+}
+
+-(void)getAllCount
+{
+    [API getWithUrl:@"getcounthistoryorder" param:@{@"ownerid":[globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        historyCount = responseObject[@"counter"] ;
+                        [_tblMenu reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+    [API getWithUrl:@"getcountfavoriteofuser" param:@{@"ownerid":[globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        favCount = responseObject[@"counter"];
+        [_tblMenu reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 
@@ -71,6 +110,8 @@ static NSString *menuCellID = @"MenuCellID";
     Menu *item = _listMenu[indexPath.row];
     cell.lblTitle.text = item.title;
     cell.icon.image = item.icon;
+    
+    
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     if (indexPath.row == 0) {
@@ -83,6 +124,21 @@ static NSString *menuCellID = @"MenuCellID";
         cell.lblNumberIndicator.text = [@([[[GlobalVar getInstance] foodList] count]) stringValue];
         
     }
+    if (indexPath.row == 2) {
+        
+        cell.lblNumberIndicator.text = [historyCount stringValue];
+        
+    }
+    if (indexPath.row == 3) {
+        
+        cell.lblNumberIndicator.text = [favCount stringValue];
+        
+    }
+    if (indexPath.row == 4) {
+        
+        cell.lblNumberIndicator.hidden = YES;
+    }
+
     
     
     

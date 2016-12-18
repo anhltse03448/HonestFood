@@ -8,39 +8,117 @@
 
 #import "ProfileViewController.h"
 #import "ProjectObject.h"
+#import "FacebookAPI.h"
+@import FBSDKShareKit ;
 @import Charts ;
-@interface ProfileViewController ()
+@interface ProfileViewController () <FBSDKSharingDelegate, FBSDKAppInviteDialogDelegate>
 @property (weak, nonatomic) IBOutlet LineChartView *lineChartView;
 @property (nonatomic,strong) NSMutableArray *dataList;
 @property (weak, nonatomic) IBOutlet UIButton *btnProtein;
 @property (weak, nonatomic) IBOutlet UIButton *btnCar;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnFat;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+
+
 @end
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Biểu đồ"];
     _dataList = [[NSMutableArray alloc]init];
     [self initChart];
-    [self loadData];
+//    [self loadData];
+    
+    _lblUserName.text = [NSString stringWithFormat:@"%@ %@",[[globarVar user] firstName] , [[globarVar user] lastName]];
+    [_userAvatar sd_setImageWithURL:[NSURL URLWithString:[[globarVar user] imgUrl] ] placeholderImage:nil];
+    _userAvatar.layer.cornerRadius = _userAvatar.frame.size.height/2;
+    _userAvatar.layer.masksToBounds = YES;
+    [self performSelector:@selector(btnTouchUp:) withObject:self.btnFat afterDelay:0];
+    
+    
     
 }
 
--(void)loadData;
-{
-    [API getWithUrl:@"getnutritioninweek" param:@{@"ownerid" : @"98"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        for (NSDictionary *dict in responseObject) {
-            ProjectObject *obj = [[ProjectObject alloc]initWithDictionary:dict];
-            [_dataList addObject:obj];
-        }
-        [self performSelector:@selector(btnTouchUp:) withObject:self.btnFat afterDelay:0];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error) ;
-    } ];
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self loadData:0];
+}
+
+-(void)loadData:(int)typeChart;
+{
+    [_dataList removeAllObjects];
+    NSMutableArray *xVals = [[NSMutableArray alloc]init];
+    NSMutableArray *data = [[NSMutableArray alloc]init];
+    if (typeChart == 0 ) {
+        [API getWithUrl:@"getnutritioninweek" param:@{@"ownerid" : [globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            for (NSDictionary *dict in responseObject) {
+                ProjectObject *obj = [[ProjectObject alloc]initWithDictionary:dict];
+                [xVals addObject:obj.date];
+                [data addObject:@(obj.fat.doubleValue)];
+//                [_dataList addObject:obj];
+            }
+            self.lineChartView.data = [self generateLineStockChartDatax:xVals :data];
+            [self.lineChartView notifyDataSetChanged];
+            //[self performSelector:@selector(btnTouchUp:) withObject:self.btnFat afterDelay:0];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"%@",error) ;
+        } ];
+    } else if (typeChart == 1 ) {
+        [API getWithUrl:@"getnutritioninmonth" param:@{@"ownerid" : [globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            for (NSDictionary *dict in responseObject) {
+                ProjectObject *obj = [[ProjectObject alloc]initWithDictionary:dict];
+                [xVals addObject:obj.date];
+                [data addObject:@(obj.fat.doubleValue)];
+//                [_dataList addObject:obj];
+            }
+            self.lineChartView.data = [self generateLineStockChartDatax:xVals :data];
+            [self.lineChartView notifyDataSetChanged];
+            //[self performSelector:@selector(btnTouchUp:) withObject:self.btnFat afterDelay:0];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"%@",error) ;
+        } ];
+    } else {
+        [API getWithUrl:@"getnutritioninyear" param:@{@"ownerid" : [globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            for (NSDictionary *dict in responseObject) {
+                ProjectObject *obj = [[ProjectObject alloc]initWithDictionary:dict];
+                [xVals addObject:obj.date];
+                [data addObject:@(obj.fat.doubleValue)];
+                //[_dataList addObject:obj];
+            }
+            self.lineChartView.data = [self generateLineStockChartDatax:xVals :data];
+            [self.lineChartView notifyDataSetChanged];
+            //[self performSelector:@selector(btnTouchUp:) withObject:self.btnFat afterDelay:0];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"%@",error) ;
+        } ];
+    }
+    
+
+}
+
+-(void)settingRightMenuBars
+{
+    
+    UIBarButtonItem* rightDrawerButton = [[UIBarButtonItem alloc]initWithImage:[UIImage shareImage] style:UIBarButtonItemStyleDone target:self action:@selector(invite)];
+    
+    
+    rightDrawerButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItems = @[rightDrawerButton];
+}
+- (void)invite;
+{
+    [[FacebookAPI sharedManager]inviteFriends:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,36 +129,28 @@
 
 - (IBAction)btnTouchUp:(id)sender {
     UIButton *but = (UIButton *) sender ;
-    NSMutableArray *xVals = [[NSMutableArray alloc]init];
-    NSMutableArray *data = [[NSMutableArray alloc]init];
+    
     
     if (but == self.btnFat) {
         [self.btnFat setBackgroundImage:[UIImage imageNamed:@"Choose"] forState:UIControlStateNormal];
         [self.btnProtein setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
         [self.btnCar setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
-        for (ProjectObject *obj in _dataList) {
-            [xVals addObject:obj.date];
-            [data addObject:@(obj.fat.doubleValue)];
-        }
+        [self loadData:0];
+        
     } else if (but == self.btnCar) {
+        [self loadData:2];
         [self.btnFat setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
         [self.btnProtein setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
         [self.btnCar setBackgroundImage:[UIImage imageNamed:@"Choose"] forState:UIControlStateNormal];
-        for (ProjectObject *obj in _dataList) {
-            [xVals addObject:obj.date];
-            [data addObject:@(obj.carbohydrate.doubleValue)];
-        }
+        
     } else if (but == self.btnProtein) {
+        [self loadData:1];
         [self.btnFat setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
         [self.btnProtein setBackgroundImage:[UIImage imageNamed:@"Choose"] forState:UIControlStateNormal];
         [self.btnCar setBackgroundImage:[UIImage imageNamed:@"notChoose"] forState:UIControlStateNormal];
-        for (ProjectObject *obj in _dataList) {
-            [xVals addObject:obj.date];
-            [data addObject:@(obj.protein.doubleValue)];
-        }
+        
     }
-    self.lineChartView.data = [self generateLineStockChartDatax:xVals :data];
-    self.lineChartView.notifyDataSetChanged ;
+    
 }
 
 - (void)initChart;
@@ -137,5 +207,42 @@
     return  d ;
 }
 
+- (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults:(NSDictionary *)results;
+{
+    
+}
+
+/**
+ Sent to the delegate when the sharer encounters an error.
+ - Parameter sharer: The FBSDKSharing that completed.
+ - Parameter error: The error.
+ */
+- (void)sharer:(id<FBSDKSharing>)sharer didFailWithError:(NSError *)error;
+{
+    
+}
+
+/**
+ Sent to the delegate when the sharer is cancelled.
+ - Parameter sharer: The FBSDKSharing that completed.
+ */
+- (void)sharerDidCancel:(id<FBSDKSharing>)sharer;
+{
+    
+}
+
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didCompleteWithResults:(NSDictionary *)results;
+{
+    
+}
+/**
+ Sent to the delegate when the app invite encounters an error.
+ - Parameter appInviteDialog: The FBSDKAppInviteDialog that completed.
+ - Parameter error: The error.
+ */
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didFailWithError:(NSError *)error;
+{
+    
+}
 
 @end

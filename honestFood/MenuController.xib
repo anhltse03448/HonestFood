@@ -1,19 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuController">
             <connections>
                 <outlet property="headerView" destination="BAI-dN-jbR" id="j1b-Ub-pGH"/>
+                <outlet property="lblUserName" destination="3rn-V4-xPX" id="ybk-SV-E56"/>
                 <outlet property="tblMenu" destination="iO0-oO-0pS" id="N0N-EK-IHE"/>
+                <outlet property="userAvatr" destination="pbc-qc-NHX" id="ztq-Q8-wN7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +50,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tumblr_oho2dtYSMF1rogvb0o1_1280.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-qc-NHX">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-qc-NHX">
                     <rect key="frame" x="10" y="10" width="107" height="107"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="pbc-qc-NHX" secondAttribute="height" id="AJl-Gc-AEx"/>
@@ -56,8 +63,8 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rn-V4-xPX">
-                    <rect key="frame" x="127" y="35" width="88.5" height="57.5"/>
-                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                    <rect key="frame" x="127" y="53.5" width="77.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -74,7 +81,4 @@
             <point key="canvasLocation" x="473" y="-55"/>
         </view>
     </objects>
-    <resources>
-        <image name="tumblr_oho2dtYSMF1rogvb0o1_1280.jpg" width="1024" height="683"/>
-    </resources>
 </document>

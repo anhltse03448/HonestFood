@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360F17F51E060924000941C3 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F741E050ECA001BB91E /* Montserrat-Black.otf */; };
+		360F17F61E060924000941C3 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F751E050ECA001BB91E /* Montserrat-Bold.otf */; };
+		360F17F71E060924000941C3 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F761E050ECA001BB91E /* Montserrat-ExtraBold.otf */; };
+		360F17F81E060924000941C3 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F771E050ECA001BB91E /* Montserrat-ExtraLight.otf */; };
+		360F17F91E060924000941C3 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F781E050ECA001BB91E /* Montserrat-Light.otf */; };
+		360F17FA1E060924000941C3 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F791E050ECA001BB91E /* Montserrat-Medium.otf */; };
+		360F17FB1E060924000941C3 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7A1E050ECA001BB91E /* Montserrat-Regular.otf */; };
+		360F17FC1E060924000941C3 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7B1E050ECA001BB91E /* Montserrat-SemiBold.otf */; };
+		360F17FD1E060924000941C3 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7C1E050ECA001BB91E /* Montserrat-Thin.otf */; };
+		360F17FE1E060924000941C3 /* MontserratAlternates-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7D1E050ECA001BB91E /* MontserratAlternates-Black.otf */; };
+		360F17FF1E060924000941C3 /* MontserratAlternates-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7E1E050ECA001BB91E /* MontserratAlternates-Bold.otf */; };
+		360F18001E060924000941C3 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F7F1E050ECA001BB91E /* MontserratAlternates-ExtraBold.otf */; };
+		360F18011E060924000941C3 /* MontserratAlternates-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F801E050ECA001BB91E /* MontserratAlternates-ExtraLight.otf */; };
+		360F18021E060924000941C3 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F811E050ECA001BB91E /* MontserratAlternates-Light.otf */; };
+		360F18031E060924000941C3 /* MontserratAlternates-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F821E050ECA001BB91E /* MontserratAlternates-Medium.otf */; };
+		360F18041E060924000941C3 /* MontserratAlternates-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F831E050ECA001BB91E /* MontserratAlternates-Regular.otf */; };
+		360F18051E060924000941C3 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F841E050ECA001BB91E /* MontserratAlternates-SemiBold.otf */; };
+		360F18061E060924000941C3 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F851E050ECA001BB91E /* MontserratAlternates-Thin.otf */; };
+		360F180A1E0615C8000941C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F18091E0615C8000941C3 /* MapKit.framework */; };
+		361C16E31E062E3C00C38433 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361C16E21E062E3C00C38433 /* CoreLocation.framework */; };
 		36D67F651E050E8D001BB91E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F631E050E8D001BB91E /* LoginViewController.m */; };
 		36D67F661E050E8D001BB91E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67F641E050E8D001BB91E /* LoginViewController.xib */; };
 		36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67F691E050EA9001BB91E /* FavoriteViewController.m */; };
@@ -24,8 +44,15 @@
 		36D67FBE1E058A22001BB91E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FBC1E058A22001BB91E /* ProfileViewController.m */; };
 		36D67FBF1E058A22001BB91E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D67FBD1E058A22001BB91E /* ProfileViewController.xib */; };
 		36D67FD91E059784001BB91E /* ProjectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D67FD81E059784001BB91E /* ProjectObject.m */; };
-		36D67FDF1E05BDF6001BB91E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67FD11E059198001BB91E /* Charts.framework */; };
-		36D67FE01E05BDF6001BB91E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36D67FD11E059198001BB91E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36ED74771E05E96D007FE54C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36ED74721E05E966007FE54C /* Charts.framework */; };
+		36ED74781E05E96D007FE54C /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36ED74721E05E966007FE54C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36ED74811E05EA3B007FE54C /* OrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED747B1E05EA3B007FE54C /* OrderController.m */; };
+		36ED74821E05EA3B007FE54C /* organics.png in Resources */ = {isa = PBXBuildFile; fileRef = 36ED747C1E05EA3B007FE54C /* organics.png */; };
+		36ED74831E05EA3B007FE54C /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED747E1E05EA3B007FE54C /* Order.m */; };
+		36ED74841E05EA3B007FE54C /* OrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ED747F1E05EA3B007FE54C /* OrderController.xib */; };
+		36ED74881E05F936007FE54C /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 36ED74861E05F936007FE54C /* iTunesArtwork@2x */; };
+		36ED74891E05F936007FE54C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 36ED74871E05F936007FE54C /* iTunesArtwork */; };
+		36ED748C1E05FA1B007FE54C /* UIFont+Replace.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED748B1E05FA1B007FE54C /* UIFont+Replace.m */; };
 		58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAA86C15E11BD5710D3CF1 /* libPods-honestFood.a */; };
 		6E76ECEB1E04D54900BF32C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECEA1E04D54900BF32C4 /* main.m */; };
 		6E76ECEE1E04D54900BF32C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E76ECED1E04D54900BF32C4 /* AppDelegate.m */; };
@@ -117,30 +144,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		36D67FD01E059198001BB91E /* PBXContainerItemProxy */ = {
+		36ED74711E05E966007FE54C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+			containerPortal = 36ED746B1E05E966007FE54C /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F241D8110E600722320;
 			remoteInfo = Charts;
 		};
-		36D67FD21E059198001BB91E /* PBXContainerItemProxy */ = {
+		36ED74731E05E966007FE54C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+			containerPortal = 36ED746B1E05E966007FE54C /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06B120D51D811E6200D14B02;
 			remoteInfo = ChartsRealm;
 		};
-		36D67FD41E059198001BB91E /* PBXContainerItemProxy */ = {
+		36ED74751E05E966007FE54C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+			containerPortal = 36ED746B1E05E966007FE54C /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F2E1D8110E600722320;
 			remoteInfo = ChartsTests;
 		};
-		36D67FE11E05BDF6001BB91E /* PBXContainerItemProxy */ = {
+		36ED74791E05E96D007FE54C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+			containerPortal = 36ED746B1E05E966007FE54C /* Charts.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 06165F231D8110E600722320;
 			remoteInfo = Charts;
@@ -154,7 +181,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36D67FE01E05BDF6001BB91E /* Charts.framework in Embed Frameworks */,
+				36ED74781E05E96D007FE54C /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +189,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		360F18091E0615C8000941C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		361C16E21E062E3C00C38433 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		36D67F621E050E8D001BB91E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		36D67F631E050E8D001BB91E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		36D67F641E050E8D001BB91E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -204,9 +233,19 @@
 		36D67FBB1E058A22001BB91E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		36D67FBC1E058A22001BB91E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		36D67FBD1E058A22001BB91E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		36D67FCA1E059198001BB91E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		36D67FD71E059784001BB91E /* ProjectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectObject.h; sourceTree = "<group>"; };
 		36D67FD81E059784001BB91E /* ProjectObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectObject.m; sourceTree = "<group>"; };
+		36ED746B1E05E966007FE54C /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
+		36ED747B1E05EA3B007FE54C /* OrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderController.m; sourceTree = "<group>"; };
+		36ED747C1E05EA3B007FE54C /* organics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organics.png; sourceTree = "<group>"; };
+		36ED747D1E05EA3B007FE54C /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		36ED747E1E05EA3B007FE54C /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		36ED747F1E05EA3B007FE54C /* OrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderController.xib; sourceTree = "<group>"; };
+		36ED74801E05EA3B007FE54C /* OrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderController.h; sourceTree = "<group>"; };
+		36ED74861E05F936007FE54C /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		36ED74871E05F936007FE54C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		36ED748A1E05FA1B007FE54C /* UIFont+Replace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Replace.h"; sourceTree = "<group>"; };
+		36ED748B1E05FA1B007FE54C /* UIFont+Replace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Replace.m"; sourceTree = "<group>"; };
 		6E76ECE61E04D54900BF32C4 /* honestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = honestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E76ECEA1E04D54900BF32C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E76ECEC1E04D54900BF32C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -347,10 +386,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361C16E31E062E3C00C38433 /* CoreLocation.framework in Frameworks */,
 				58062D36B86CD29864A8DE0A /* libPods-honestFood.a in Frameworks */,
 				6E76ED0A1E04EDEC00BF32C4 /* FBSDKCoreKit.framework in Frameworks */,
 				36D67F8C1E0542FC001BB91E /* FBSDKShareKit.framework in Frameworks */,
-				36D67FDF1E05BDF6001BB91E /* Charts.framework in Frameworks */,
+				36ED74771E05E96D007FE54C /* Charts.framework in Frameworks */,
+				360F180A1E0615C8000941C3 /* MapKit.framework in Frameworks */,
 				6E76ED0B1E04EDEC00BF32C4 /* FBSDKLoginKit.framework in Frameworks */,
 				6E76ED8F1E04EF3A00BF32C4 /* Bolts.framework in Frameworks */,
 			);
@@ -421,6 +462,8 @@
 			children = (
 				36D67FAC1E05784C001BB91E /* DetailTableViewCell */,
 				36D67F911E0550C0001BB91E /* DetailViewController.h */,
+				36ED748A1E05FA1B007FE54C /* UIFont+Replace.h */,
+				36ED748B1E05FA1B007FE54C /* UIFont+Replace.m */,
 				36D67F921E0550C0001BB91E /* DetailViewController.m */,
 				36D67F931E0550C0001BB91E /* DetailViewController.xib */,
 				36D67FB71E0578B5001BB91E /* CommentObject.h */,
@@ -432,7 +475,7 @@
 		36D67FAC1E05784C001BB91E /* DetailTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				36D67FCA1E059198001BB91E /* Charts.xcodeproj */,
+				36ED746B1E05E966007FE54C /* Charts.xcodeproj */,
 				36D67FB21E057883001BB91E /* CommentTableViewCell.h */,
 				36D67FB31E057883001BB91E /* CommentTableViewCell.m */,
 				36D67FB41E057883001BB91E /* CommentTableViewCell.xib */,
@@ -451,16 +494,6 @@
 			name = ProfileViewController;
 			sourceTree = "<group>";
 		};
-		36D67FCB1E059198001BB91E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				36D67FD11E059198001BB91E /* Charts.framework */,
-				36D67FD31E059198001BB91E /* ChartsRealm.framework */,
-				36D67FD51E059198001BB91E /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		36D67FD61E05976C001BB91E /* ProfileObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +501,16 @@
 				36D67FD81E059784001BB91E /* ProjectObject.m */,
 			);
 			name = ProfileObject;
+			sourceTree = "<group>";
+		};
+		36ED746C1E05E966007FE54C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36ED74721E05E966007FE54C /* Charts.framework */,
+				36ED74741E05E966007FE54C /* ChartsRealm.framework */,
+				36ED74761E05E966007FE54C /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6E76ECDD1E04D54800BF32C4 = {
@@ -548,6 +591,12 @@
 		6E76ED0C1E04EDFC00BF32C4 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				36ED747B1E05EA3B007FE54C /* OrderController.m */,
+				36ED747C1E05EA3B007FE54C /* organics.png */,
+				36ED747D1E05EA3B007FE54C /* Order.h */,
+				36ED747E1E05EA3B007FE54C /* Order.m */,
+				36ED747F1E05EA3B007FE54C /* OrderController.xib */,
+				36ED74801E05EA3B007FE54C /* OrderController.h */,
 				6E76ED0D1E04EE4700BF32C4 /* AppConstant.h */,
 				6E76ED0E1E04EE4700BF32C4 /* AppService.h */,
 				6E76ED0F1E04EE4700BF32C4 /* AppService.m */,
@@ -644,6 +693,8 @@
 		6E76ED941E04F9F300BF32C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36ED74861E05F936007FE54C /* iTunesArtwork@2x */,
+				36ED74871E05F936007FE54C /* iTunesArtwork */,
 				36D67FBA1E0589CC001BB91E /* ProfileViewController */,
 				36D67F8D1E05506B001BB91E /* DetailViewController */,
 				6E76ED951E051CCB00BF32C4 /* BlogController */,
@@ -680,6 +731,8 @@
 		B392BA346A320219F4F18A5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				361C16E21E062E3C00C38433 /* CoreLocation.framework */,
+				360F18091E0615C8000941C3 /* MapKit.framework */,
 				6E76ED8E1E04EF3A00BF32C4 /* Bolts.framework */,
 				6E76ED081E04EDEC00BF32C4 /* FBSDKCoreKit.framework */,
 				6E76ED091E04EDEC00BF32C4 /* FBSDKLoginKit.framework */,
@@ -707,7 +760,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				36D67FE21E05BDF6001BB91E /* PBXTargetDependency */,
+				36ED747A1E05E96D007FE54C /* PBXTargetDependency */,
 			);
 			name = honestFood;
 			productName = honestFood;
@@ -731,6 +784,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -748,8 +804,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 36D67FCB1E059198001BB91E /* Products */;
-					ProjectRef = 36D67FCA1E059198001BB91E /* Charts.xcodeproj */;
+					ProductGroup = 36ED746C1E05E966007FE54C /* Products */;
+					ProjectRef = 36ED746B1E05E966007FE54C /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -760,25 +816,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		36D67FD11E059198001BB91E /* Charts.framework */ = {
+		36ED74721E05E966007FE54C /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 36D67FD01E059198001BB91E /* PBXContainerItemProxy */;
+			remoteRef = 36ED74711E05E966007FE54C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		36D67FD31E059198001BB91E /* ChartsRealm.framework */ = {
+		36ED74741E05E966007FE54C /* ChartsRealm.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ChartsRealm.framework;
-			remoteRef = 36D67FD21E059198001BB91E /* PBXContainerItemProxy */;
+			remoteRef = 36ED74731E05E966007FE54C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		36D67FD51E059198001BB91E /* ChartsTests.xctest */ = {
+		36ED74761E05E966007FE54C /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 36D67FD41E059198001BB91E /* PBXContainerItemProxy */;
+			remoteRef = 36ED74751E05E966007FE54C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -788,6 +844,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360F17F51E060924000941C3 /* Montserrat-Black.otf in Resources */,
+				360F17F61E060924000941C3 /* Montserrat-Bold.otf in Resources */,
+				360F17F71E060924000941C3 /* Montserrat-ExtraBold.otf in Resources */,
+				360F17F81E060924000941C3 /* Montserrat-ExtraLight.otf in Resources */,
+				360F17F91E060924000941C3 /* Montserrat-Light.otf in Resources */,
+				360F17FA1E060924000941C3 /* Montserrat-Medium.otf in Resources */,
+				360F17FB1E060924000941C3 /* Montserrat-Regular.otf in Resources */,
+				360F17FC1E060924000941C3 /* Montserrat-SemiBold.otf in Resources */,
+				360F17FD1E060924000941C3 /* Montserrat-Thin.otf in Resources */,
+				360F17FE1E060924000941C3 /* MontserratAlternates-Black.otf in Resources */,
+				360F17FF1E060924000941C3 /* MontserratAlternates-Bold.otf in Resources */,
+				360F18001E060924000941C3 /* MontserratAlternates-ExtraBold.otf in Resources */,
+				360F18011E060924000941C3 /* MontserratAlternates-ExtraLight.otf in Resources */,
+				360F18021E060924000941C3 /* MontserratAlternates-Light.otf in Resources */,
+				360F18031E060924000941C3 /* MontserratAlternates-Medium.otf in Resources */,
+				360F18041E060924000941C3 /* MontserratAlternates-Regular.otf in Resources */,
+				360F18051E060924000941C3 /* MontserratAlternates-SemiBold.otf in Resources */,
+				360F18061E060924000941C3 /* MontserratAlternates-Thin.otf in Resources */,
 				6E76ED781E04EE4700BF32C4 /* HistoryController.xib in Resources */,
 				36D67F951E0550C0001BB91E /* DetailViewController.xib in Resources */,
 				6E76EDAF1E05629B00BF32C4 /* list@2x.png in Resources */,
@@ -816,8 +890,10 @@
 				6E76EDD31E05698C00BF32C4 /* img_6@3x.png in Resources */,
 				6E76ED621E04EE4700BF32C4 /* BaseController.xib in Resources */,
 				6E76EDCB1E05698C00BF32C4 /* img_4.png in Resources */,
+				36ED74891E05F936007FE54C /* iTunesArtwork in Resources */,
 				6E76EDD51E057E0900BF32C4 /* BG_Image.png in Resources */,
 				6E76ED651E04EE4700BF32C4 /* CartController.xib in Resources */,
+				36ED74881E05F936007FE54C /* iTunesArtwork@2x in Resources */,
 				6E76EDCE1E05698C00BF32C4 /* img_5.png in Resources */,
 				6E76ED801E04EE4700BF32C4 /* MenuCell.xib in Resources */,
 				6E76EDC31E05698C00BF32C4 /* img_1@2x.png in Resources */,
@@ -830,6 +906,7 @@
 				36D67FBF1E058A22001BB91E /* ProfileViewController.xib in Resources */,
 				36D67F6C1E050EA9001BB91E /* FavoriteViewController.xib in Resources */,
 				6E76EDC21E05698C00BF32C4 /* img_1.png in Resources */,
+				36ED74841E05EA3B007FE54C /* OrderController.xib in Resources */,
 				6E76EDD21E05698C00BF32C4 /* img_6@2x.png in Resources */,
 				6E76EDA41E0529A300BF32C4 /* BlogCell.xib in Resources */,
 				6E76ECF41E04D54900BF32C4 /* Main.storyboard in Resources */,
@@ -837,6 +914,7 @@
 				6E76EDCA1E05698C00BF32C4 /* img_3@3x.png in Resources */,
 				6E76EDAD1E05629B00BF32C4 /* clock@2x.png in Resources */,
 				6E76ED7B1E04EE4700BF32C4 /* ListItemInCartView.xib in Resources */,
+				36ED74821E05EA3B007FE54C /* organics.png in Resources */,
 				6E76ED631E04EE4700BF32C4 /* cart.png in Resources */,
 				6E76EDC81E05698C00BF32C4 /* img_3.png in Resources */,
 			);
@@ -915,6 +993,7 @@
 				36D67F6B1E050EA9001BB91E /* FavoriteViewController.m in Sources */,
 				6E76ED7A1E04EE4700BF32C4 /* ListItemInCartView.m in Sources */,
 				6E76ED5E1E04EE4700BF32C4 /* AppService.m in Sources */,
+				36ED74831E05EA3B007FE54C /* Order.m in Sources */,
 				36D67F871E050EDA001BB91E /* Delegate.m in Sources */,
 				6E76ED861E04EE4700BF32C4 /* NotificationCenter.m in Sources */,
 				36D67FD91E059784001BB91E /* ProjectObject.m in Sources */,
@@ -925,6 +1004,7 @@
 				6E76ED6E1E04EE4700BF32C4 /* FoodCategoryController.m in Sources */,
 				6E76ED8A1E04EE4700BF32C4 /* UIButton+VerticalLayout.m in Sources */,
 				6E76ED5F1E04EE4700BF32C4 /* BaseCollectionController.m in Sources */,
+				36ED74811E05EA3B007FE54C /* OrderController.m in Sources */,
 				6E76ED721E04EE4700BF32C4 /* FoodController.m in Sources */,
 				6E76EDA71E05320400BF32C4 /* Blog.m in Sources */,
 				6E76ED701E04EE4700BF32C4 /* FoodCell.m in Sources */,
@@ -938,6 +1018,7 @@
 				6E76ECEB1E04D54900BF32C4 /* main.m in Sources */,
 				6E76ED931E04F5E000BF32C4 /* NSDate+MDCalendar.m in Sources */,
 				6E76ED761E04EE4700BF32C4 /* GlobalVar.m in Sources */,
+				36ED748C1E05FA1B007FE54C /* UIFont+Replace.m in Sources */,
 				6E76ED661E04EE4700BF32C4 /* CartView.m in Sources */,
 				6E76EDA31E0529A300BF32C4 /* BlogCell.m in Sources */,
 				6E76ED041E04D9BF00BF32C4 /* User.m in Sources */,
@@ -952,10 +1033,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		36D67FE21E05BDF6001BB91E /* PBXTargetDependency */ = {
+		36ED747A1E05E96D007FE54C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
-			targetProxy = 36D67FE11E05BDF6001BB91E /* PBXContainerItemProxy */;
+			targetProxy = 36ED74791E05E96D007FE54C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

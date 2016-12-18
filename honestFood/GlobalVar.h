@@ -13,13 +13,15 @@
 @interface GlobalVar : NSObject
 {
     NSMutableArray <Food*> *foodList;
-    
+    NSNumber *userId;
+    User *user;
  
 
 }
 
-@property (nonatomic ,retain) NSMutableArray *foodList;
-
+@property (nonatomic ,strong) NSMutableArray *foodList;
+@property (nonatomic ,strong) NSNumber *userId;
+@property (nonatomic ,strong) User *user;
 
 
 

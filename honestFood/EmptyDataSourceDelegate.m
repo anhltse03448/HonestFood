@@ -56,7 +56,7 @@
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
     paragraph.alignment = NSTextAlignmentCenter;
     
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0f],
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"Montserrat" size:18],
                                  NSForegroundColorAttributeName: [UIColor lightGrayColor],
                                  NSParagraphStyleAttributeName: paragraph};
     

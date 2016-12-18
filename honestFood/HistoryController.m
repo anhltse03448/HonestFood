@@ -25,10 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setTitle:@"Lịch Sử"];
     _listFoodHistory = [NSMutableArray new];
-    items = [NSMutableArray new];
     
+    items = [NSMutableArray new];
+    //[self. setShowsVerticalScrollIndicator:NO];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -52,7 +53,9 @@
 {
     [items removeAllObjects];
     [_listFoodHistory removeAllObjects];
-    [API getWithUrl:kAPIGetHistoryOrder param:@{@"ownerid":@98} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [API getWithUrl:kAPIGetHistoryOrder param:@{@"ownerid":[globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"history :%@",responseObject);
         
         for (NSDictionary *dict  in responseObject) {
             
@@ -68,7 +71,9 @@
             [_listFoodHistory addObject:foodList];
 
         }
-        [self setupSegmentTimeLine];
+        if (_listFoodHistory.count > 0) {
+            [self setupSegmentTimeLine];
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

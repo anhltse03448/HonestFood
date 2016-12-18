@@ -11,7 +11,7 @@
 
 @implementation GlobalVar
 
-@synthesize foodList;
+@synthesize foodList,userId,user;
 
 static GlobalVar *instance = nil;
 
@@ -22,6 +22,7 @@ static GlobalVar *instance = nil;
         if (instance == nil) {
             
             instance = [[GlobalVar alloc]init];
+            
             
             
         }
@@ -36,6 +37,7 @@ static GlobalVar *instance = nil;
     self = [super init];
     if (self) {
         foodList = [NSMutableArray new];
+        user = [User new];
     }
     
     return self;

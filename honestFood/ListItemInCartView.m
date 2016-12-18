@@ -9,12 +9,13 @@
 #import "ListItemInCartView.h"
 
 
-@interface ListItemInCartView ()<UITableViewDelegate,UITableViewDataSource>
+@interface ListItemInCartView ()<UITableViewDelegate,UITableViewDataSource,DelegateFood>
 
 @property (weak, nonatomic) IBOutlet UITableView *tblItems;
 @property (weak, nonatomic) IBOutlet UIView *viewCartInfo;
 @property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *btnChart;
 
@@ -46,10 +47,14 @@
 
 
 - (IBAction)btnChartDidTap:(id)sender {
-    CGRect frame = CGRectMake(0, 0, kscreenWidth -60, 300) ;
-    UIView *view = [Utils chartViewWithFoodList:[[GlobalVar getInstance] foodList] AndFrame:frame];
-    //UIView * view = [Utils chartViewWithFoodList:[[GlobalVar getInstance] foodList] AndFrame:];
-    [Utils showChartWiewWithChart:view];
+    
+    if ([[globarVar foodList] count] > 0) {
+        
+        CGRect frame = CGRectMake(0, 0, kscreenWidth -60, 300) ;
+        UIView *view = [Utils chartViewWithFoodList:[[GlobalVar getInstance] foodList] AndFrame:frame];
+        [Utils showChartWiewWithChart:view];
+        
+    }
     
     
 }
@@ -58,6 +63,8 @@
 
 
 - (IBAction)btnBuyDidTap:(id)sender {
+    
+    _buttonBuyDidTap();
     
     
 }
@@ -68,7 +75,7 @@
     [super awakeFromNib];
     self.tblItems.dataSource = self;
     self.tblItems.delegate = self;
-    self.tblItems.rowHeight = 80.f;
+    self.tblItems.rowHeight = 100.f;
     
 
     self.tblItems.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
@@ -87,7 +94,7 @@
 
 -(void)updateLabel
 {
-    _lblPrice.text = [Utils totalPriceWithListFood:[[GlobalVar getInstance]foodList]];
+    _lblPrice.text = [NSString stringWithFormat:@"VNĐ %@",[Utils totalPriceWithListFood:[[GlobalVar getInstance]foodList]]];
 }
 
 +(ListItemInCartView*)shared
@@ -116,11 +123,32 @@
         cell.type = FoodCellTypeInCart;
     }
     
-
+    
+    
     Food *food = [[GlobalVar getInstance]foodList][indexPath.row];
-   [cell displayWithFood:food];
+    cell.ownerController = self.ownerController;
+    [cell displayWithFood:food];
+    [cell hiddenActionButton];
+    cell.delegate1 = self ;
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 5.0f;
+}
+-(void)tap:(UITableViewCell *)cell;
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = @"Thêm vào ưa thích thành công";
+    [_tblItems reloadData];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [hud hideAnimated:YES];
+        
+    });
+    
+   
+}
 
 @end

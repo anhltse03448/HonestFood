@@ -43,8 +43,17 @@
         [slideMenu setMaximumLeftDrawerWidth:mainWindow.frame.size.width*0.8f];
     }
     
-    [mainWindow setRootViewController:slideMenu];
-    [mainWindow makeKeyAndVisible];
+    [UIView transitionWithView:mainWindow
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        [mainWindow setRootViewController:slideMenu];
+                        [mainWindow makeKeyAndVisible];
+                        mainWindow.backgroundColor = kNavigationBarColor;
+                    }
+                    completion:nil];
+    
+    
 
 }
 

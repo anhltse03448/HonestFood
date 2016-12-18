@@ -11,6 +11,7 @@
 @interface MenuController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tblMenu;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
-
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatr;
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 
 @end

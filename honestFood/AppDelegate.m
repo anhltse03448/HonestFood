@@ -18,16 +18,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [[UILabel appearance] setFont:[UIFont fontWithName:@"Montserrat-Regular" size:17]];
+    
     [FBSDKLoginButton class];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
-//    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-//    [self.window setRootViewController:login];
-//    [self.window makeKeyAndVisible];
+    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    [self.window setRootViewController:login];
     
-    [Menu settingSlideMenuController];
+    [self.window setBackgroundColor:kNavigationBarColor];
+    [self.window makeKeyAndVisible];
+    
+//    [Menu settingSlideMenuController];
     
     return YES;
 }

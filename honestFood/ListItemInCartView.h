@@ -10,11 +10,14 @@
 
 
 typedef void (^listItemIncartMoveToWindow)();
+typedef  void (^btnBuyDidTap)();
 
 
 @interface ListItemInCartView : UIView
 
 @property listItemIncartMoveToWindow moveToWindow;
+@property btnBuyDidTap buttonBuyDidTap;
+@property UIViewController * ownerController;
 
 
 + (instancetype)sharedInstance;

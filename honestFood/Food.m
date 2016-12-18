@@ -39,7 +39,7 @@
 {
     self = [super init];
     if (self) {
-        
+    
         _foodId = dict[@"foodId"];
         _note = dict[@"note"];
         _describe = dict[@"describe"];

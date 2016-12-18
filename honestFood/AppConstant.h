@@ -16,7 +16,7 @@
 
 
 
-#define kAPIBaseUrl                         @"http://192.168.10.135:8080/"
+#define kAPIBaseUrl                         @"http://112.213.94.177:8080/honestfood/"
 #define kAPIGetListFoodCat                  @"getlistfoodcat"
 #define kAPIGetListFood                     @"getlistfood"
 #define kAPIGetHistoryOrder                 @"gethistoryorder"
@@ -31,6 +31,8 @@
 
 
 
+#define kUserDeffaultKeyUserInfo                @"UserInfo"
+#define kUserDefaultUserID                      @"UserID"
 #define kAppColor                           [UIColor hx_colorWithHexRGBAString:@"#75d92f"]
 #define kNavigationBarColor                 [UIColor hx_colorWithHexRGBAString:@"#0e0d0e"]
 #define kGalleryTabExtraWidth               15.0f

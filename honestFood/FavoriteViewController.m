@@ -13,7 +13,7 @@
 #import "FacebookAPI.h"
 @import FBSDKCoreKit ;
 @import FBSDKShareKit;
-@interface FavoriteViewController ()
+@interface FavoriteViewController () <DelegateFood>
 @property (weak, nonatomic) IBOutlet UITableView *tbl;
 @property (weak, nonatomic) IBOutlet UIView *viewDelete;
 @property (weak, nonatomic) IBOutlet UILabel *lblDelete;
@@ -30,6 +30,8 @@ int check = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setTitle:@"Ưa Thích"];
     self.tbl.delegate = self ;
     self.tbl.dataSource = self ;
     self.tbl.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
@@ -47,8 +49,9 @@ int check = 0;
 
 - (void)initData;
 {
+    
     NSMutableArray *tmp = [[NSMutableArray alloc]init];
-    [API getWithUrl:@"getfavoritefood" param:@{@"userid" : @"96"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [API getWithUrl:@"getfavoritefood" param:@{@"userid" : [globarVar userId]} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         for (NSDictionary *dict in responseObject) {
             Food *food = [[ Food alloc]initWithDictionary:dict];
             [tmp addObject:food];
@@ -66,11 +69,14 @@ int check = 0;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 {
-    return 1 ;
+    return _foodList.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section ;
 {
-    return _foodList.count ;
+    if (_foodList.count == 0) {
+        return 0;
+    }
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
@@ -80,6 +86,9 @@ int check = 0;
     if (!cell) {
         //[_foodImage sd_setImageWithURL:[NSURL URLWithString:food.imgUrl] placeholderImage:nil];
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FoodCell" owner:nil options:nil];
+        if (nib.count == 0 ) {
+            NSLog(@"Fuck");
+        }
         cell = nib[0];
         cell.type = FoodCellTypeFavorite;
         cell.selectionStyle = UITableViewCellSelectionStyleNone ;
@@ -87,8 +96,22 @@ int check = 0;
         
     }
     
-    Food *food = _foodList[indexPath.row] ;
+    cell.ownerController = self;
+    cell.delegate1 = self ;
+    
+    Food *food = _foodList[indexPath.section] ;
     [cell displayWithFood:food];
+    
+//    cell.utilsDidTap = ^()
+//    {
+//        
+////        [_tbl beginUpdates];
+////        [_tbl deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[_foodList indexOfObject:food] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+////        [_tbl endUpdates];
+//        [_foodList removeObject:food];
+//        [_tbl reloadData];
+//    };
+    
 //    NSString *link = food.imgUrl ;
 //    
 //    [cell.img_food sd_setImageWithURL:[NSURL URLWithString: link] placeholderImage : nil];
@@ -114,9 +137,9 @@ int check = 0;
     //[_viewDelete layoutIfNeeded];
     if (check == 0) {
         _viewBottomConstrain.constant = 0 ;
-        DetailViewController *detailViewController = [[ DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil] ;
-        detailViewController.food = _foodList[indexPath.row] ;
-        [self.navigationController pushViewController:detailViewController animated:true];
+//        DetailViewController *detailViewController = [[ DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil] ;
+//        detailViewController.food = _foodList[indexPath.row] ;
+//        [self.navigationController pushViewController:detailViewController animated:true];
         
     } else {
         BOOL isHas = [_listCheck containsObject:@(indexPath.row)];
@@ -162,15 +185,25 @@ int check = 0;
     
     [self.tbl reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
--(void)cartViewDidTap:(UIBarButtonItem*)item
-{
-    check = ( check + 1) % 2 ;
-    [self.tbl reloadData];
-}
+//-(void)cartViewDidTap:(UIBarButtonItem*)item
+//{
+//    check = ( check + 1) % 2 ;
+//    [self.tbl reloadData];
+//}
 
 - (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didCompleteWithResults:(NSDictionary *)results;
 {
     
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 5.0f;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5.0f;
 }
 /**
  Sent to the delegate when the app invite encounters an error.
@@ -180,6 +213,12 @@ int check = 0;
 - (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didFailWithError:(NSError *)error;
 {
     
+}
+
+- (void)tap:(FoodCell *)cell;
+{
+    [self.foodList removeObject:cell.food_];
+    [self.tbl reloadData];
 }
 
 @end

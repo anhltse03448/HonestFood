@@ -8,7 +8,7 @@
 
 #import "CartController.h"
 
-@interface CartController ()
+@interface CartController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tblCart;
 @property (strong , nonatomic) NSMutableArray *foodList;
@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setTitle:@"Giỏ hàng"];
     self.tblCart.rowHeight = 100.f;
     _tblCart.emptyDataSetDelegate = [EmptyDataSourceDelegate sharedInstance];
     _tblCart.emptyDataSetSource = [EmptyDataSourceDelegate sharedInstance];
@@ -46,6 +46,7 @@
     _actionView.backgroundColor = kAppColor;
     
     [_btnChart setImage:[UIImage barChartImage] forState:UIControlStateNormal];
+    [self.tblCart setShowsVerticalScrollIndicator:NO];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -60,10 +61,10 @@
         [self settingRightMenuBars];
     }
     
-    _lblPrice.text = [Utils totalPriceWithListFood:_foodList];
+    _lblPrice.text = [NSString stringWithFormat:@"VNĐ %@",[Utils totalPriceWithListFood:_foodList]];
     if (_type == CartControllerTypeHistory) {
         
-        [_btnBuy setTitle:@"Re-Buy" forState:UIControlStateNormal];
+        [_btnBuy setTitle:@"Đặt lại" forState:UIControlStateNormal];
     }
     
     [self.tblCart reloadData];
@@ -73,7 +74,6 @@
     
     
     CartView *cart = [CartView sharedInstance];
-    
     cart.frame = CGRectMake(0, 0, 40, 40);
     
     
@@ -111,8 +111,8 @@
 
 - (IBAction)btnChartDidTap:(id)sender {
     
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kscreenWidth - 20, 350)];
-    view.backgroundColor = [UIColor whiteColor];
+    CGRect frame = CGRectMake(0, 0, kscreenWidth -60, 350) ;
+    UIView *view = [Utils chartViewWithFoodList:_foodList AndFrame:frame];
     [Utils showChartWiewWithChart:view];
 }
 
@@ -134,11 +134,14 @@
     }];
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return _foodList.count;
+    if (_foodList.count == 0) {
+        return 0 ;
+    }
+    return 1 ;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
@@ -148,23 +151,23 @@
         
         NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"FoodCell" owner:nil options:nil];
         cell = nib[0];
-        
-        if (_type == CartControllerTypeHistory) {
-            
-            [cell hiddenActionButton];
-            cell.type = FoodCellTypeHistory;
-        }
-        if (_type == CartControllerTypeNew) {
-            
-            cell.type = FoodCellTypeInCategory;
-            
-        }
+
+    }
+    Food *food = _foodList[indexPath.section];
+    
+    [cell displayWithFood:food];
+    if (_type == CartControllerTypeHistory) {
         
         
+        cell.type = FoodCellTypeHistory;
+        [cell hiddenActionButton];
+    }
+    if (_type == CartControllerTypeNew) {
+        
+        cell.type = FoodCellTypeInCategory;
         
     }
-    Food *food = _foodList[indexPath.row];
-    [cell displayWithFood:food];
+    
     
     
     return cell;
@@ -173,6 +176,12 @@
     
     if (_type == CartControllerTypeNew) {
         
+        OrderController *orderController = [[OrderController alloc]initWithNibName:@"OrderController" bundle:nil];
+        NavigationController *nav = [[NavigationController alloc]initWithRootViewController:orderController];
+        
+        [self presentViewController:nav animated:NO completion:nil];
+        
+        
     }
     if (_type == CartControllerTypeHistory) {
         
@@ -180,6 +189,15 @@
     
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+{
+    return _foodList.count ;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return 5.0f;
+}
 
 
 

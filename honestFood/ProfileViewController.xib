@@ -24,7 +24,9 @@
                 <outlet property="btnCar" destination="vyk-m8-tpV" id="YL8-CL-3hs"/>
                 <outlet property="btnFat" destination="oW9-cz-qa6" id="Po1-AG-bi1"/>
                 <outlet property="btnProtein" destination="JDt-Xd-7hj" id="ggq-Hy-Exi"/>
+                <outlet property="lblUserName" destination="OUV-Sc-Yfe" id="xzQ-gy-1wG"/>
                 <outlet property="lineChartView" destination="FHJ-9O-gJi" id="d4X-rN-Mj1"/>
+                <outlet property="userAvatar" destination="fdX-ii-mYG" id="yU9-LI-M2l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,6 +44,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuH-Uy-Im6">
                             <rect key="frame" x="0.0" y="78" width="375" height="78"/>
                             <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUV-Sc-Yfe">
+                                    <rect key="frame" x="116" y="27.5" width="124" height="25"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdX-ii-mYG">
                                     <rect key="frame" x="40" y="10" width="60" height="60"/>
                                     <constraints>
@@ -49,12 +57,6 @@
                                         <constraint firstAttribute="width" secondItem="fdX-ii-mYG" secondAttribute="height" multiplier="1:1" id="YoS-B8-drn"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUV-Sc-Yfe">
-                                    <rect key="frame" x="116" y="28" width="124" height="25"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="OUV-Sc-Yfe" firstAttribute="centerY" secondItem="fdX-ii-mYG" secondAttribute="centerY" id="9Wv-wa-tN7"/>
@@ -90,9 +92,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW9-cz-qa6">
-                                            <rect key="frame" x="48" y="31" width="24" height="19"/>
+                                            <rect key="frame" x="41" y="31" width="38" height="19"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                            <state key="normal" title="Fat" backgroundImage="Choose"/>
+                                            <state key="normal" title="Ngày" backgroundImage="Choose"/>
                                             <connections>
                                                 <action selector="btnTouchUp:" destination="-1" eventType="touchUpInside" id="SKo-Sc-loU"/>
                                             </connections>
@@ -108,9 +110,9 @@
                                     <rect key="frame" x="120" y="0.0" width="120" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDt-Xd-7hj">
-                                            <rect key="frame" x="32.5" y="31" width="55" height="19"/>
+                                            <rect key="frame" x="36.5" y="31" width="47" height="19"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                            <state key="normal" title="Protein" backgroundImage="Choose"/>
+                                            <state key="normal" title="Tháng" backgroundImage="Choose"/>
                                             <connections>
                                                 <action selector="btnTouchUp:" destination="-1" eventType="touchUpInside" id="T7N-mO-oNo"/>
                                             </connections>
@@ -126,9 +128,9 @@
                                     <rect key="frame" x="240" y="0.0" width="119" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyk-m8-tpV">
-                                            <rect key="frame" x="44.5" y="31" width="30" height="19"/>
+                                            <rect key="frame" x="41" y="31" width="37" height="19"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                            <state key="normal" title="Cab" backgroundImage="Choose"/>
+                                            <state key="normal" title="Năm" backgroundImage="Choose"/>
                                             <connections>
                                                 <action selector="btnTouchUp:" destination="-1" eventType="touchUpInside" id="r73-DP-ZWr"/>
                                             </connections>

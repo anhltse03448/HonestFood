@@ -40,10 +40,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)reloadScrollView
-{
-    [self getData];
-}
+//-(void)reloadScrollView
+//{
+//    [self getData];
+//}
 
 
 -(void)viewWillAppear:(BOOL)animated
@@ -69,43 +69,50 @@
 
 -(void)getData
 {
-    [self.foodList removeAllObjects];
+    //[self.foodList removeAllObjects];
+    NSMutableArray *tmp = [[NSMutableArray alloc]init];
     
     [API getWithUrl:kAPIGetListFood param:@{@"foodcatid":_foodCatID} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+//        NSLog(@"rres :%@",responseObject);
+//        
+//        NSArray *ar = (NSArray*)responseObject;
+//        
+//      
+//        
+//        for (int i = 0; i < ar.count; i++) {
+//            
+//            
+//            
+//            NSDictionary *dict = ar[i];
+//            NSLog(@"dict :%@",dict);
+//            Food *f = [[Food alloc]initWithDictionary:dict];
+//            NSLog(@"foood name :%@",f.foodName);
+//            [tmp addObject:f];
+//        }
+//        
+
         
         for (NSDictionary*dict in responseObject) {
             
             Food *food = [[Food alloc]initWithDictionary:dict];
             
             if ([[[GlobalVar getInstance] foodList] containsFood:food] != nil) {
-                [_foodList addObject:[[[GlobalVar getInstance] foodList] containsFood:food]];
+                [tmp addObject:[[[GlobalVar getInstance] foodList] containsFood:food]];
                 
             }else
             {
-                [_foodList addObject:food];
+                [tmp addObject:food];
             }
             
-//            if ([[[GlobalVar getInstance] foodList] count] > 0) {
-//                
-//                
-//                for (int i = 0; i < [[[GlobalVar getInstance] foodList] count]; i++) {
-//                    
-//                    Food *otherFood = [[GlobalVar getInstance] foodList][i];
-//                    
-//                    if ([food isEqualOtherFood:otherFood]) {
-//                        
-//                        [_foodList addObject:otherFood];
-//                        
-//                    }
-//                    
-//                }
-//            }else
-//            {
-//                [_foodList addObject:food];
-//            }
+
   
         }
         
+        
+        
+        
+        _foodList = tmp ;
         [_tblFood reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -116,6 +123,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
+    if (_foodList.count == 0) {
+        return 0;
+    }
     return 1;
 }
 
@@ -136,7 +146,7 @@
         
     }
     
-    Food *selFood = _foodList[indexPath.row];
+    Food *selFood = _foodList[indexPath.section];
     
     [cell displayWithFood:selFood];
     

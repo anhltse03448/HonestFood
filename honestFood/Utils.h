@@ -15,4 +15,5 @@
 +(void)showChartWiewWithChart:(UIView*)chart;
 + (void)setupPieChartView:(PieChartView *)chartView;
 +(UIView*)chartViewWithFoodList:(NSMutableArray *)foodList AndFrame : (CGRect)frame ;
++(double)totalPayWithListFood:(NSMutableArray *)foodList;
 @end

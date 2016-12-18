@@ -19,12 +19,12 @@
         _password = dict[@"password"];
         _firstName = dict[@"firstName"];
         _lastName  = dict[@"lastName"];
-        _mobile = dict[@"mobile"];
-        _notiToken = dict[@"notiToken"];
+//        _mobile = dict[@"mobile"];
+//        _notiToken = dict[@"notiToken"];
         _imgUrl = dict[@"imgUrl"];
-        if ([dict[@"role"] isKindOfClass:[NSNull class]] ) {
-            _role = [[Role alloc]initWithDictionary:dict[@"role"]];    
-        }
+//        if ([dict[@"role"] isKindOfClass:[NSNull class]] ) {
+//            _role = [[Role alloc]initWithDictionary:dict[@"role"]];    
+//        }
         
     }
     

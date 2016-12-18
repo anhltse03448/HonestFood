@@ -29,6 +29,15 @@
     
 }
 
+
++(double)totalPayWithListFood:(NSMutableArray *)foodList;
+{
+    double price = 0;
+    for (Food *food in foodList) {
+        price += [food.quantity integerValue] * [[food price] doubleValue];
+    }
+    return price;
+}
 +(void)showChartWiewWithChart:(UIView*)chart;
 {
     KLCPopup* popup =  [KLCPopup popupWithContentView:chart showType:KLCPopupShowTypeFadeIn dismissType:KLCPopupDismissTypeFadeOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
@@ -57,6 +66,7 @@
 + (void)setupPieChartView:(PieChartView *)chartView;
 {
     chartView.usePercentValuesEnabled = YES;
+    
     chartView.drawSlicesUnderHoleEnabled = NO;
     chartView.holeRadiusPercent = 0.58;
     chartView.transparentCircleRadiusPercent = 0.61;
@@ -69,12 +79,12 @@
     paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Nutrion"];
+    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@""];
     
     
     chartView.centerAttributedText = centerText;
     
-    chartView.drawHoleEnabled = YES;
+    chartView.drawHoleEnabled = NO;
     chartView.rotationAngle = 0.0;
     chartView.rotationEnabled = YES;
     chartView.highlightPerTapEnabled = YES;
